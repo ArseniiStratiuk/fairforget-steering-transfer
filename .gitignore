@@ -1,0 +1,32 @@
+# Keep the workspace's private notes and incoming files out of the repository.
+/*
+!/.gitignore
+!/README.md
+!/requirements.txt
+!/pyproject.toml
+!/notebooks/
+!/slurm/
+!/src/
+!/data/
+!/docs/
+
+# Credentials and local runtime state, including inside tracked directories.
+**/.env
+**/.env.*
+**/*password*
+**/*credentials*
+**/.venv/
+**/__pycache__/
+**/.ipynb_checkpoints/
+**/.cache/
+**/*.pyc
+
+# Data files and model artifacts are stored separately from code.
+/data/*
+!/data/README.md
+**/*.safetensors
+**/*.pth
+**/*.pt
+**/models/
+**/logs/
+**/runs/

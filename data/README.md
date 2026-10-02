@@ -4,6 +4,7 @@
 |---|---|---|
 | 620 EN/UK safety prompt pairs | `safety/translated_formated.csv` | 100 JBB + 520 AdvBench; translations await human review; SHA256 `5135c91c972fd4362e9e02573a8635b8630ceba8c8f9a81848bf7b491483ccdf` |
 | Belebele EN/UK | `belebele/7899cdfa4e1e0d733fd77c848e2c273cb1d32be2/` | [facebook/belebele](https://huggingface.co/datasets/facebook/belebele), CC BY-SA 4.0; unchanged, 900 questions per language |
+| 100 EN/UK JBB benign prompts | `safety/jbb-benign.csv` | Translated `Goal` of JBB `data/benign-behaviors.csv`; [prompt-pairs](https://huggingface.co/datasets/steering-transfer/prompt-pairs) revision `e993bed1f0a3f5b3cf18c70b88168875c78126e2`, SHA256 `d0d2bcaf32b55a50e9b8a93c0c50f5924d83aebed00d59a88774d2ebf0defb05`; individual review complete, `draft` pending team review. Review log `jbb-benign-review.csv` and `jbb-benign.provenance.json` in the same revision |
 | Original JBB harmful/benign tables | `jbb/886acc352a31533ffbcf4ef22c744658688086fc/` | [JBB-Behaviors](https://huggingface.co/datasets/JailbreakBench/JBB-Behaviors), upstream dataset card declares MIT |
 
 AdvBench source: [harmful behaviors](https://github.com/llm-attacks/llm-attacks/blob/main/data/advbench/harmful_behaviors.csv). The received export lacks a pinned AdvBench revision and independently verified translation-generator metadata. No license has been assigned to the translations; repository code licenses do not establish separate data rights.

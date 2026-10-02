@@ -65,7 +65,7 @@ nbformat.write(notebook, path)
 PY
 ```
 
-This recomputes scores from recorded predictions. New model inference requires JUPITER. Manual review sheets are created under `results/scoring/` and existing labels are preserved. Record your manual labels before revealing Guard verdicts.
+This recomputes scores from recorded predictions. New model inference requires JUPITER. The scoring notebook shows fixed random audit examples and a possible Guard false positive as static outputs. The shared review key identifies the complete audit sample; manual labels are not yet available.
 
 ## JUPITER inference
 

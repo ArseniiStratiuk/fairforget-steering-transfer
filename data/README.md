@@ -8,10 +8,16 @@
 
 AdvBench source: [harmful behaviors](https://github.com/llm-attacks/llm-attacks/blob/main/data/advbench/harmful_behaviors.csv). The received export lacks a pinned AdvBench revision and independently verified translation-generator metadata. No license has been assigned to the translations; repository code licenses do not establish separate data rights.
 
-`record_id` identifies a bilingual prompt pair. `discard` is the supplied similarity flag, not an exclusion decision; all 620 records are retained. Scientific splits are not frozen. Keep translations and overlapping behavior groups together when assigning splits.
+`record_id` identifies a bilingual prompt pair. `discard` is the supplied similarity flag, not an exclusion decision; all 620 records are retained. Notebook 01 explores a larger split. The actual smaller English extraction and validation split is frozen in notebook 08; all JBB prompts are reserved. Translation pairs and supplied overlap groups stay together.
 
 Inputs are research prompts, not collected personal user conversations. Original JBB fields may mention public entities; generated responses are not verified factual claims. Harmful prompts and outputs are retained for safety evaluation. Translation review must check intent and key details.
 
 Raw files stay outside Git. Shared, private snapshots live in [prompt-pairs](https://huggingface.co/datasets/steering-transfer/prompt-pairs) and [model-answers](https://huggingface.co/datasets/steering-transfer/model-answers). Automated judge outputs and shared manual-audit IDs are in [safety-scores](https://huggingface.co/datasets/steering-transfer/safety-scores); human safety labels remain pending. `configs/artifacts.json` pins their revisions and checksums. Results notebooks load these snapshots through the local HF cache; organization membership and HF login are required. Logs and executed worker notebooks remain local and on JUPITER.
 
 Harmless extraction candidates: Stanford Alpaca instructions at revision `f13496211289def0ff88ae673389ae14a818b4b3`, [CC BY-NC 4.0](https://github.com/tatsu-lab/stanford_alpaca/blob/main/DATA_LICENSE). Only self-contained instructions are sampled; generated answers and model weights are not used. The 160 candidates are pending safety and overlap review, not a frozen harmless set.
+
+## Experiment artifacts
+
+The reviewed experiment manifest is `configs/reviewed_experiments.json`. Versioned releases preserve raw answers, next-token utility predictions, Guard verdicts, model/input revisions and checksums. Historical sampled responses and corrected greedy v2 responses remain separate. Saved vectors and the outlier mask belong in a model artifact repository, not Git. No model weights or raw activation dump is included.
+
+Refusal-change example eligibility is AI-assisted, not an independent human annotation dataset. The conditional seed-42 sample illustrates observed changes and is not a success-rate estimator. Ukrainian verdicts and translations remain unvalidated.

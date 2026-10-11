@@ -1,0 +1,227 @@
+{
+  "model_answers": {
+    "repo_id": "steering-transfer/model-answers",
+    "repo_type": "dataset",
+    "revision": "d011197e91589922d1f4ca48828dcb19524a2ee1",
+    "files": [
+      {
+        "local_path": "results/transfer/frozen-transfer-v2/gemma/2273125/responses.jsonl",
+        "filename": "experiments/2026-10-11/results/transfer/frozen-transfer-v2/gemma/2273125/responses.jsonl",
+        "sha256": "603a2ec2ee21a9e381fb5f80a99c1a39af89cc48f1f9bf3dd6c8b9a9725f795f",
+        "bytes": 7502000
+      },
+      {
+        "local_path": "results/transfer/frozen-transfer-v2/gemma/2273125/merge.metadata.json",
+        "filename": "experiments/2026-10-11/results/transfer/frozen-transfer-v2/gemma/2273125/merge.metadata.json",
+        "sha256": "c4cbf60573a58dc03a20490f9a87e9b2fb8403446850e8328386f794f3c95a70",
+        "bytes": 151
+      },
+      {
+        "local_path": "results/transfer/frozen-transfer-v2/gemma/2273125/worker-0/metadata.json",
+        "filename": "experiments/2026-10-11/results/transfer/frozen-transfer-v2/gemma/2273125/worker-0/metadata.json",
+        "sha256": "98e47bff4d216f33fc8ebf0da0fb9854fec614a8f1aab7bd43684443fb776364",
+        "bytes": 3644
+      },
+      {
+        "local_path": "results/transfer/frozen-transfer-v2/gemma/2273125/worker-1/metadata.json",
+        "filename": "experiments/2026-10-11/results/transfer/frozen-transfer-v2/gemma/2273125/worker-1/metadata.json",
+        "sha256": "98e47bff4d216f33fc8ebf0da0fb9854fec614a8f1aab7bd43684443fb776364",
+        "bytes": 3644
+      },
+      {
+        "local_path": "results/transfer/frozen-transfer-v2/gemma/2273125/worker-2/metadata.json",
+        "filename": "experiments/2026-10-11/results/transfer/frozen-transfer-v2/gemma/2273125/worker-2/metadata.json",
+        "sha256": "98e47bff4d216f33fc8ebf0da0fb9854fec614a8f1aab7bd43684443fb776364",
+        "bytes": 3644
+      },
+      {
+        "local_path": "results/transfer/frozen-transfer-v2/gemma/2273125/worker-3/metadata.json",
+        "filename": "experiments/2026-10-11/results/transfer/frozen-transfer-v2/gemma/2273125/worker-3/metadata.json",
+        "sha256": "98e47bff4d216f33fc8ebf0da0fb9854fec614a8f1aab7bd43684443fb776364",
+        "bytes": 3644
+      },
+      {
+        "local_path": "results/transfer/frozen-transfer-v2/lapa/2273126/responses.jsonl",
+        "filename": "experiments/2026-10-11/results/transfer/frozen-transfer-v2/lapa/2273126/responses.jsonl",
+        "sha256": "9b14ce3417590c9800577956f54a24424a3fafc10ab0c2d820eff3a2fae943d5",
+        "bytes": 3904686
+      },
+      {
+        "local_path": "results/transfer/frozen-transfer-v2/lapa/2273126/merge.metadata.json",
+        "filename": "experiments/2026-10-11/results/transfer/frozen-transfer-v2/lapa/2273126/merge.metadata.json",
+        "sha256": "c4cbf60573a58dc03a20490f9a87e9b2fb8403446850e8328386f794f3c95a70",
+        "bytes": 151
+      },
+      {
+        "local_path": "results/transfer/frozen-transfer-v2/lapa/2273126/worker-0/metadata.json",
+        "filename": "experiments/2026-10-11/results/transfer/frozen-transfer-v2/lapa/2273126/worker-0/metadata.json",
+        "sha256": "be139867c9fe0e037d8a9c52da617c060f73c59a6b501806bd260f16954c5998",
+        "bytes": 3643
+      },
+      {
+        "local_path": "results/transfer/frozen-transfer-v2/lapa/2273126/worker-1/metadata.json",
+        "filename": "experiments/2026-10-11/results/transfer/frozen-transfer-v2/lapa/2273126/worker-1/metadata.json",
+        "sha256": "be139867c9fe0e037d8a9c52da617c060f73c59a6b501806bd260f16954c5998",
+        "bytes": 3643
+      },
+      {
+        "local_path": "results/transfer/frozen-transfer-v2/lapa/2273126/worker-2/metadata.json",
+        "filename": "experiments/2026-10-11/results/transfer/frozen-transfer-v2/lapa/2273126/worker-2/metadata.json",
+        "sha256": "be139867c9fe0e037d8a9c52da617c060f73c59a6b501806bd260f16954c5998",
+        "bytes": 3643
+      },
+      {
+        "local_path": "results/transfer/frozen-transfer-v2/lapa/2273126/worker-3/metadata.json",
+        "filename": "experiments/2026-10-11/results/transfer/frozen-transfer-v2/lapa/2273126/worker-3/metadata.json",
+        "sha256": "be139867c9fe0e037d8a9c52da617c060f73c59a6b501806bd260f16954c5998",
+        "bytes": 3643
+      },
+      {
+        "local_path": "results/transfer/frozen-transfer-v1/gemma/2160809/predictions.jsonl",
+        "filename": "experiments/2026-10-11/results/transfer/frozen-transfer-v1/gemma/2160809/predictions.jsonl",
+        "sha256": "ad3794b2bc951d6b4265d6205c28ebddab4bc32346cee603fa109b4bf33fa493",
+        "bytes": 1951841
+      },
+      {
+        "local_path": "results/transfer/frozen-transfer-v1/gemma/2160809/metadata.json",
+        "filename": "experiments/2026-10-11/results/transfer/frozen-transfer-v1/gemma/2160809/metadata.json",
+        "sha256": "d13670115114a53c62c63283e52c825160f3b348475321f5295d23f933c7e3ef",
+        "bytes": 3196
+      },
+      {
+        "local_path": "results/transfer/frozen-transfer-v1/lapa/2160810/predictions.jsonl",
+        "filename": "experiments/2026-10-11/results/transfer/frozen-transfer-v1/lapa/2160810/predictions.jsonl",
+        "sha256": "ddacfe14461af1075956e2579a816d997d9f193d1ab4a2d33df36de6169c6406",
+        "bytes": 1875456
+      },
+      {
+        "local_path": "results/transfer/frozen-transfer-v1/lapa/2160810/metadata.json",
+        "filename": "experiments/2026-10-11/results/transfer/frozen-transfer-v1/lapa/2160810/metadata.json",
+        "sha256": "451527100ed19abdf8379d15efdba76bc2fa68fab5702e7219fc8a78170d95a8",
+        "bytes": 3195
+      },
+      {
+        "local_path": "results/transfer/frozen-transfer-v1/gemma/2160809/control.jsonl",
+        "filename": "experiments/2026-10-11/results/transfer/frozen-transfer-v1/gemma/2160809/control.jsonl",
+        "sha256": "18f7b3db6c66575c05a2e1e0f04a5dad35e68ca0e2f2f301bf51d9361ab36171",
+        "bytes": 65118
+      },
+      {
+        "local_path": "results/validation/gemma-english-pilot-v1/2147435/screen.csv",
+        "filename": "experiments/2026-10-11/results/validation/gemma-english-pilot-v1/2147435/screen.csv",
+        "sha256": "3482dd343c4c52c88297e1a0f387bb57b7ddc95e8fa5a514c958e6d0ab77c697",
+        "bytes": 1032
+      },
+      {
+        "local_path": "results/validation/gemma-english-pilot-v1/2148240/screen.csv",
+        "filename": "experiments/2026-10-11/results/validation/gemma-english-pilot-v1/2148240/screen.csv",
+        "sha256": "c830957073bd4348869d989a17b1cc2a7244da444ccc0cd2b000adadfbc06da0",
+        "bytes": 1857
+      },
+      {
+        "local_path": "results/validation/gemma-english-pilot-v1/2148240/metadata.json",
+        "filename": "experiments/2026-10-11/results/validation/gemma-english-pilot-v1/2148240/metadata.json",
+        "sha256": "31e5483e1362f63192dcababa7ad0384139a692a0b436f5c2e4047a9155f57c5",
+        "bytes": 4579
+      },
+      {
+        "local_path": "results/validation/gemma-english-pilot-v1/2148240/responses.jsonl",
+        "filename": "experiments/2026-10-11/results/validation/gemma-english-pilot-v1/2148240/responses.jsonl",
+        "sha256": "d719ae5b94c085a7e7d2ad76a56edd1924ae7ac29dc3a90ea4f3688cc65f6d95",
+        "bytes": 211073
+      },
+      {
+        "local_path": "results/activations/gemma-english-pilot-v1/2144565/extraction.metadata.json",
+        "filename": "experiments/2026-10-11/results/activations/gemma-english-pilot-v1/2144565/extraction.metadata.json",
+        "sha256": "5adc66c9823585932ab6c5f6c165bc7a239c1cfbbce0ffb3c19bfb653183eeec",
+        "bytes": 4834
+      },
+      {
+        "local_path": "results/activations/gemma-english-pilot-v1/2144565/direction_summary.csv",
+        "filename": "experiments/2026-10-11/results/activations/gemma-english-pilot-v1/2144565/direction_summary.csv",
+        "sha256": "960d48c290df1b202011403a90510c41d8ea491c1ea73413bb6d98966b39a22a",
+        "bytes": 1570
+      },
+      {
+        "local_path": "results/utility/gemma-english-pilot-v1/2152213/predictions.jsonl",
+        "filename": "experiments/2026-10-11/results/utility/gemma-english-pilot-v1/2152213/predictions.jsonl",
+        "sha256": "f2e6ac55bdb28c4ad6a7d6cb3e42a73919cee2fd555c44e4f3ca2c7cdf82e178",
+        "bytes": 1292047
+      },
+      {
+        "local_path": "results/utility/gemma-english-pilot-v1/2152213/metadata.json",
+        "filename": "experiments/2026-10-11/results/utility/gemma-english-pilot-v1/2152213/metadata.json",
+        "sha256": "ba45ec233700d110edb02686720f93f0b34c0993c90c1e8c82d8628556474258",
+        "bytes": 1051
+      },
+      {
+        "local_path": "results/persona/persona-prefix-pilot-v2/2273127/responses.jsonl",
+        "filename": "experiments/2026-10-11/results/persona/persona-prefix-pilot-v2/2273127/responses.jsonl",
+        "sha256": "6027db9c449f2eb75b8c631b969cc445b780d5ed29d23f6822219b17fa592ca8",
+        "bytes": 215704
+      },
+      {
+        "local_path": "results/persona/persona-prefix-pilot-v2/2273127/manifest.json",
+        "filename": "experiments/2026-10-11/results/persona/persona-prefix-pilot-v2/2273127/manifest.json",
+        "sha256": "730f6c483c8e83ec534f1362ebebf68027829f66fc92b7e7284462e131c2e851",
+        "bytes": 2233
+      }
+    ]
+  },
+  "safety_scores": {
+    "repo_id": "steering-transfer/safety-scores",
+    "repo_type": "dataset",
+    "revision": "4f0632e985d7d98a8223d30ffb271424af5e335e",
+    "files": [
+      {
+        "local_path": "results/transfer/frozen-transfer-v2/gemma/2273136/verdicts.jsonl",
+        "filename": "experiments/2026-10-11/results/transfer/frozen-transfer-v2/gemma/2273136/verdicts.jsonl",
+        "sha256": "078032070c442a82bb2a6e08647d3154b525f356b6f3e92ffaa4a8421b3c2765",
+        "bytes": 339405
+      },
+      {
+        "local_path": "results/transfer/frozen-transfer-v2/gemma/2273136/judge.metadata.json",
+        "filename": "experiments/2026-10-11/results/transfer/frozen-transfer-v2/gemma/2273136/judge.metadata.json",
+        "sha256": "bc4a6ae7b40e65f0957b157740975be773cc029690b74c6b41b528445873ccef",
+        "bytes": 581
+      },
+      {
+        "local_path": "results/transfer/frozen-transfer-v2/lapa/2273137/verdicts.jsonl",
+        "filename": "experiments/2026-10-11/results/transfer/frozen-transfer-v2/lapa/2273137/verdicts.jsonl",
+        "sha256": "d8a9df808d059ba257a9b66d63d9b7aabce0eb37da2cd3b1e44f8f90ad81d1b6",
+        "bytes": 341808
+      },
+      {
+        "local_path": "results/transfer/frozen-transfer-v2/lapa/2273137/judge.metadata.json",
+        "filename": "experiments/2026-10-11/results/transfer/frozen-transfer-v2/lapa/2273137/judge.metadata.json",
+        "sha256": "6c9b79538baa490be639712173d0e69785f34f5fc56cd8ef9aa5a498f618d977",
+        "bytes": 581
+      },
+      {
+        "local_path": "results/scoring/gemma-english-pilot-v1/2151986/verdicts.jsonl",
+        "filename": "experiments/2026-10-11/results/scoring/gemma-english-pilot-v1/2151986/verdicts.jsonl",
+        "sha256": "5a3a2e5243607f4c1a1b9d1ef0a8af46bbf8c1bf60a3fc7ea81d8c16a6483db9",
+        "bytes": 10408
+      },
+      {
+        "local_path": "results/scoring/gemma-english-pilot-v1/2151986/verdicts.metadata.json",
+        "filename": "experiments/2026-10-11/results/scoring/gemma-english-pilot-v1/2151986/verdicts.metadata.json",
+        "sha256": "5256b62fa53fa77147768ba14a31cdec81d31701ed47ef62f4c2edc0f77e94b4",
+        "bytes": 566
+      }
+    ]
+  },
+  "directions": {
+    "repo_id": "steering-transfer/refusal-directions",
+    "repo_type": "model",
+    "revision": "f88ec00c0e12beb990d9f672a6ae18f872f628f2",
+    "files": [
+      {
+        "local_path": "results/validation/gemma-english-pilot-v1/2148240/directions.pt",
+        "filename": "experiments/2026-10-11/results/validation/gemma-english-pilot-v1/2148240/directions.pt",
+        "sha256": "adeb1f7a4bdacc1fd1b2d17c6d16ab17294e1ef418f40a3c07e74d80bdbf9d0d",
+        "bytes": 217212
+      }
+    ]
+  }
+}

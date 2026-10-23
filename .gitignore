@@ -9,11 +9,11 @@
 !/src/
 !/configs/
 !/data/
-!/docs/
 
 # Credentials and local runtime state, including inside tracked directories.
 **/.env
 **/.env.*
+**/*.env
 **/*password*
 **/*credentials*
 **/.venv/
@@ -31,3 +31,9 @@
 **/models/
 **/logs/
 **/runs/
+
+# Local working notes and superseded implementations.
+/docs/
+/notebooks/archive/
+/slurm/archive/
+**/*.egg-info/

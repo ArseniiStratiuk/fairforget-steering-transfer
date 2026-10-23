@@ -1,0 +1,40 @@
+{
+  "prompt_pairs": {
+    "repo_id": "steering-transfer/prompt-pairs",
+    "filename": "prompt-pairs.csv",
+    "revision": "fa135e0b0356cf607e47e8efc939b8f4dd7d2054",
+    "sha256": "5135c91c972fd4362e9e02573a8635b8630ceba8c8f9a81848bf7b491483ccdf",
+    "local_path": "data/safety/fa135e0b0356cf607e47e8efc939b8f4dd7d2054/prompt-pairs.csv",
+    "label": "harmful"
+  },
+  "jbb_benign": {
+    "repo_id": "steering-transfer/prompt-pairs",
+    "filename": "jbb-benign.csv",
+    "revision": "e993bed1f0a3f5b3cf18c70b88168875c78126e2",
+    "sha256": "d0d2bcaf32b55a50e9b8a93c0c50f5924d83aebed00d59a88774d2ebf0defb05",
+    "local_path": "data/safety/e993bed1f0a3f5b3cf18c70b88168875c78126e2/jbb-benign.csv",
+    "label": "harmless"
+  },
+  "alpaca": {
+    "revision": "f13496211289def0ff88ae673389ae14a818b4b3",
+    "sha256": "2eddafc6b977608d778aaab8dfc7e50e547b3af9826dfb9e909d9fc362e4a419",
+    "local_path": "data/alpaca/f13496211289def0ff88ae673389ae14a818b4b3/alpaca_data.json",
+    "url": "https://raw.githubusercontent.com/tatsu-lab/stanford_alpaca/f13496211289def0ff88ae673389ae14a818b4b3/alpaca_data.json"
+  },
+  "belebele": {
+    "eng_Latn": {
+      "revision": "7899cdfa4e1e0d733fd77c848e2c273cb1d32be2",
+      "repo_id": "facebook/belebele",
+      "filename": "data/eng_Latn.jsonl",
+      "local_path": "data/belebele/7899cdfa4e1e0d733fd77c848e2c273cb1d32be2/eng_Latn.jsonl",
+      "sha256": "15af884c2b5994fdc71199e79d553a1864b08ce1b31894aa87f6be925a064a31"
+    },
+    "ukr_Cyrl": {
+      "revision": "7899cdfa4e1e0d733fd77c848e2c273cb1d32be2",
+      "repo_id": "facebook/belebele",
+      "filename": "data/ukr_Cyrl.jsonl",
+      "local_path": "data/belebele/7899cdfa4e1e0d733fd77c848e2c273cb1d32be2/ukr_Cyrl.jsonl",
+      "sha256": "a064f157a9322a8bf76f3027da353fe85dbe79e5e5b86aa39b131246d9add932"
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "gemma": {
+    "revision": "96b6f1eccf38110c56df3a15bffe176da04bfd80",
+    "checkpoint": "models/gemma-3-12b-it/96b6f1eccf38110c56df3a15bffe176da04bfd80"
+  },
+  "lapa": {
+    "revision": "2969fd997f07b33727c6f10795d78ef23cc5c037",
+    "checkpoint": "/e/project1/e-dev-2026d09-075/fairforget/models/lapa-v0.1.2-instruct/2969fd997f07b33727c6f10795d78ef23cc5c037"
+  },
+  "llama_guard_4": {
+    "revision": "87acb4b94e930c3d679e6e7ee9d57e2feab9ea71",
+    "checkpoint": "models/Llama-Guard-4-12B/87acb4b94e930c3d679e6e7ee9d57e2feab9ea71"
+  }
+}

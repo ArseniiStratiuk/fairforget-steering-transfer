@@ -95,6 +95,9 @@ on held-out requests, using each model's native chat template.
 - [Refusal transfer](notebooks/research/02_refusal_transfer.ipynb): extraction through safety/utility results.
 - [Persona steering](notebooks/research/03_persona_steering.ipynb): contrasting response personas and activation steering.
 
+Translation candidate generation, COMET screening and blinded review commands:
+[src/translation_review](src/translation_review/README.md).
+
 ## Run
 
 ```bash

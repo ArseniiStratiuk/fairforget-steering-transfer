@@ -40,7 +40,10 @@ REVIEWER_COLUMNS = (
     "comment",
     "code",
 )
-CLAUDE_CANDIDATES = ("data/safety/translated_formated.csv", "data/safety/prompt-pairs.csv")
+CLAUDE_CANDIDATES = (
+    "data/safety/translated_formated.csv",
+    "data/safety/prompt-pairs.csv",
+)
 
 
 def sha256(path: Path) -> str:
@@ -58,7 +61,7 @@ def resolve_claude_csv(root: Path, explicit: str | None, offline: bool = False) 
     for candidate in CLAUDE_CANDIDATES:
         if (root / candidate).is_file():
             return root / candidate
-    pinned = json.loads((root / "configs/artifacts.json").read_text())["prompt_pairs"]
+    pinned = json.loads((root / "configs/datasets.json").read_text())["prompt_pairs"]
     from huggingface_hub import hf_hub_download
 
     return Path(
@@ -72,7 +75,9 @@ def resolve_claude_csv(root: Path, explicit: str | None, offline: bool = False) 
     )
 
 
-def load_translations(gemma: Path, lapa: Path, claude: Path, artifacts: Path | None) -> pd.DataFrame:
+def load_translations(
+    gemma: Path, lapa: Path, claude: Path, artifacts: Path | None
+) -> pd.DataFrame:
     """One row per record_id with the English goal and the three Ukrainian translations.
 
     Checks that the three files describe the same records with the same English text, and (unless
@@ -82,7 +87,9 @@ def load_translations(gemma: Path, lapa: Path, claude: Path, artifacts: Path | N
         expected = json.loads(Path(artifacts).read_text())["prompt_pairs"]["sha256"]
         actual = sha256(claude)
         if actual != expected:
-            raise SystemExit(f"{claude} has SHA256 {actual}, not the pinned prompt-pairs.csv ({expected}).")
+            raise SystemExit(
+                f"{claude} has SHA256 {actual}, not the pinned prompt-pairs.csv ({expected})."
+            )
     frames = {}
     for name, path in (("gemma", gemma), ("lapa", lapa)):
         df = pd.read_csv(path, keep_default_na=False)
@@ -90,31 +97,39 @@ def load_translations(gemma: Path, lapa: Path, claude: Path, artifacts: Path | N
             raise SystemExit(f"{path}: record_id is not unique")
         bad = df[df.status != "ok"]
         if len(bad):
-            raise SystemExit(f"{path}: {len(bad)} rows have status != ok; fix or exclude them first: {bad.record_id.tolist()[:10]}")
+            raise SystemExit(
+                f"{path}: {len(bad)} rows have status != ok; fix or exclude them first: {bad.record_id.tolist()[:10]}"
+            )
         frames[name] = df.set_index("record_id")
     claude_df = pd.read_csv(claude, keep_default_na=False)
     if not claude_df.record_id.is_unique:
         raise SystemExit(f"{claude}: record_id is not unique")
     claude_df = claude_df.set_index("record_id")
-    g, l = frames["gemma"], frames["lapa"]
-    if not (set(g.index) == set(l.index) == set(claude_df.index)):
+    gemma_frame, lapa_frame = frames["gemma"], frames["lapa"]
+    if not (set(gemma_frame.index) == set(lapa_frame.index) == set(claude_df.index)):
         raise SystemExit("Gemma, Lapa and Claude files cover different record_ids")
-    claude_df = claude_df.reindex(g.index)
-    l = l.reindex(g.index)
-    for name, other in (("lapa", l), ("claude", claude_df)):
-        mismatch = (other.goal.str.strip() != g.goal.str.strip()).sum()
+    claude_df = claude_df.reindex(gemma_frame.index)
+    lapa_frame = lapa_frame.reindex(gemma_frame.index)
+    for name, other in (("lapa", lapa_frame), ("claude", claude_df)):
+        mismatch = (other.goal.str.strip() != gemma_frame.goal.str.strip()).sum()
         if mismatch:
-            raise SystemExit(f"{mismatch} English goals differ between gemma and {name}")
+            raise SystemExit(
+                f"{mismatch} English goals differ between gemma and {name}"
+            )
     data = pd.DataFrame(
         {
-            "source": g.source,
-            "goal": g.goal,
-            "uk_gemma": g.ukrainian_prompt,
-            "uk_lapa": l.ukrainian_prompt,
+            "source": gemma_frame.source,
+            "goal": gemma_frame.goal,
+            "uk_gemma": gemma_frame.ukrainian_prompt,
+            "uk_lapa": lapa_frame.ukrainian_prompt,
             "uk_claude": claude_df.ukrainian_prompt,
         }
     ).sort_index()
-    empty = [(rid, s) for s in SYSTEMS for rid in data.index[data[f"uk_{s}"].str.strip().eq("")]]
+    empty = [
+        (rid, s)
+        for s in SYSTEMS
+        for rid in data.index[data[f"uk_{s}"].str.strip().eq("")]
+    ]
     if empty:
         raise SystemExit(f"Empty translations: {empty[:10]}")
     return data

@@ -1,5 +1,5 @@
 #!/bin/bash
-# Translate the combined AdvBench/JBB prompt set with Gemma and Lapa (notebook 10).
+# Translate the combined AdvBench/JBB prompt set with Gemma and Lapa with the pinned source and model settings.
 # Usage:  sbatch slurm/translate.sbatch                      # all 620 records, both models
 #         ITEM_LIMIT=3 sbatch slurm/translate.sbatch         # smoke test: 3 per source
 #         MODELS=lapa sbatch slurm/translate.sbatch          # one model only
@@ -22,31 +22,15 @@ cd /e/project1/e-dev-2026d09-075/fairforget-steering-transfer
 export HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1
 export TOKENIZERS_PARALLELISM=false OMP_NUM_THREADS=8
 export MODELS="${MODELS:-gemma,lapa}" ITEM_LIMIT="${ITEM_LIMIT:-0}"
-python -m ipykernel install --user --name steering-baselines --display-name 'JUPITER baselines'
-printf 'Host=%s Models=%s Limit=%s\n' "$(hostname)" "$MODELS" "$ITEM_LIMIT"
-
-# srun --gpu-bind=single:1 makes exactly one GPU visible to the notebook (the
-# allocation alone exposed all four: GPU=0,1,2,3 in job 2260256).
-WORKER=$(cat <<'PYWORKER'
+export PYTHONPATH="$PWD/src:${PYTHONPATH:-}"
+python - "$SLURM_JOB_ID" <<'PYREGISTER'
+import json
+import sys
 from pathlib import Path
-import os
 
-import nbformat
-from nbclient import NotebookClient
-
-notebook = nbformat.read(Path("notebooks/10_translate_prompt_pairs.ipynb"), as_version=4)
-executed = Path("logs") / f"translate-{os.environ['SLURM_JOB_ID']}.ipynb"
-try:
-    NotebookClient(
-        notebook,
-        timeout=None,
-        kernel_name="steering-baselines",
-        resources={"metadata": {"path": "notebooks"}},
-    ).execute()
-finally:
-    nbformat.write(notebook, executed)
-print("Notebook completed; executed copy:", executed, flush=True)
-PYWORKER
-)
-srun --unbuffered --gpu-bind=single:1 --kill-on-bad-exit=1 bash -c \
-    'printf "Visible GPU: %s\n" "$CUDA_VISIBLE_DEVICES"; exec python -c "$0"' "$WORKER"
+jobs = json.loads(Path("compute/jobs.json").read_text())
+if sys.argv[1] not in jobs:
+    raise SystemExit("Register this job in compute/jobs.json before execution")
+PYREGISTER
+srun --unbuffered --gpu-bind=single:1 --kill-on-bad-exit=1 \
+    python -m translation_review.translate_prompts

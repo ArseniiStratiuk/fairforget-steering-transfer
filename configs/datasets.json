@@ -36,5 +36,12 @@
       "local_path": "data/belebele/7899cdfa4e1e0d733fd77c848e2c273cb1d32be2/ukr_Cyrl.jsonl",
       "sha256": "a064f157a9322a8bf76f3027da353fe85dbe79e5e5b86aa39b131246d9add932"
     }
+  },
+  "jbb_benign_review": {
+    "repo_id": "steering-transfer/prompt-pairs",
+    "filename": "jbb-benign-review.csv",
+    "revision": "e993bed1f0a3f5b3cf18c70b88168875c78126e2",
+    "sha256": "a64df1a0397522da2096c171ae28573fb9583dbc2dc9f7393f075c74c588cac7",
+    "local_path": "data/safety/e993bed1f0a3f5b3cf18c70b88168875c78126e2/jbb-benign-review.csv"
   }
 }

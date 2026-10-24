@@ -102,3 +102,16 @@ def compare_split_membership(extraction, validation, test):
         counts.insert(0, "split", split)
         frames.append(counts)
     return pd.concat(frames, ignore_index=True)
+
+
+def load_translation_review(root):
+    from .datasets import load_dataset_sources, resolve_dataset_file
+
+    source = load_dataset_sources(root)["jbb_benign_review"]
+    review = pd.read_csv(resolve_dataset_file(root, source), keep_default_na=False)
+    if review.record_id.duplicated().any():
+        raise ValueError("Translation review contains duplicate record IDs")
+    allowed = {"approve", "fixed"}
+    if not review.review_status.isin(allowed).all():
+        raise ValueError("Unknown translation review status")
+    return review

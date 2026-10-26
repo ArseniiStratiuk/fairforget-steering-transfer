@@ -108,11 +108,14 @@ Translation candidate generation, COMET screening and blinded review commands:
 ```bash
 python3 -m venv .venv
 .venv/bin/python -m pip install -e '.[notebooks]'
+.venv/bin/hf auth login
 .venv/bin/python -m ipykernel install --user --name steering-research --display-name 'Steering research'
 ```
 
-Open a notebook in VS Code and select **Steering research**. Reproduce comparison
-tables from the pinned artifacts:
+Request file access in the three artifact repositories linked below, then
+authenticate with your HF account. Organization members retain their existing
+access. Open a notebook in VS Code and select **Steering research**. Reproduce
+comparison tables from the pinned artifacts:
 
 ```bash
 .venv/bin/python -m steering_transfer.run_notebook \
@@ -139,7 +142,7 @@ Transformers 4.57.6 and the existing ARM64 environment. Outputs live under
 - [Judge verdicts](https://huggingface.co/datasets/steering-transfer/safety-scores)
 - [Refusal directions](https://huggingface.co/steering-transfer/refusal-directions)
 
-Answer and direction files require approved access. Exact result checksums are in
+Answer, judge and direction files require approved access. Exact result checksums are in
 `configs/frozen_results.json`; dataset identities and assignments are pinned by
 `configs/frozen_data.json`. [Data sources and terms](data/README.md).
 

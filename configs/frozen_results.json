@@ -1,37 +1,65 @@
 {
   "name": "bilingual-refusal-v1",
   "data_revision": "ad61e819403256072115d9a7e52bcd006ac29f81",
-  "storage": "local_only",
+  "storage": "huggingface",
   "files": {
     "responses": {
       "local_path": "results/final/bilingual-refusal-v1/release/responses.jsonl",
-      "sha256": "f640a5e70b507bfd12c85ccdd730fc37fc873a880d32461863063dff08b30448"
+      "sha256": "f640a5e70b507bfd12c85ccdd730fc37fc873a880d32461863063dff08b30448",
+      "repo_id": "steering-transfer/model-answers",
+      "repo_type": "dataset",
+      "revision": "adfc18a59b8a067de05c7c47514cf756d7001b8d",
+      "filename": "experiments/bilingual-refusal-v1/responses.jsonl"
     },
     "utility": {
       "local_path": "results/final/bilingual-refusal-v1/release/utility.jsonl",
-      "sha256": "91b83c230f7b5bd0133363f073c004c6dc4557bc65c28af3e0e5e4b37fb7148a"
+      "sha256": "91b83c230f7b5bd0133363f073c004c6dc4557bc65c28af3e0e5e4b37fb7148a",
+      "repo_id": "steering-transfer/model-answers",
+      "repo_type": "dataset",
+      "revision": "adfc18a59b8a067de05c7c47514cf756d7001b8d",
+      "filename": "experiments/bilingual-refusal-v1/utility.jsonl"
     },
     "evaluations": {
       "local_path": "results/final/bilingual-refusal-v1/release/evaluations.jsonl",
-      "sha256": "fe8a24ad35458bf0e3fb31ba2d1093889a88bb7956114dea03ff2ac5fa7b2c97"
+      "sha256": "fe8a24ad35458bf0e3fb31ba2d1093889a88bb7956114dea03ff2ac5fa7b2c97",
+      "repo_id": "steering-transfer/safety-scores",
+      "repo_type": "dataset",
+      "revision": "9c6a90f745ce5875e688e0f7fdb41a442280f6bf",
+      "filename": "experiments/bilingual-refusal-v1/llama-guard-4.jsonl"
     },
     "behavior": {
       "local_path": "results/final/bilingual-refusal-v1/release/behavior.jsonl",
-      "sha256": "22901482973573f399ba70f58536ddff20a58d9d289f387ce8381b743c68c505"
+      "sha256": "22901482973573f399ba70f58536ddff20a58d9d289f387ce8381b743c68c505",
+      "repo_id": "steering-transfer/safety-scores",
+      "repo_type": "dataset",
+      "revision": "9c6a90f745ce5875e688e0f7fdb41a442280f6bf",
+      "filename": "experiments/bilingual-refusal-v1/jev-refusal-v2.jsonl"
     },
     "validation": {
       "local_path": "results/final/bilingual-refusal-v1/release/validation.jsonl",
-      "sha256": "b60d58b68bbe5be719982fbedadba1228f44c8975d4bdc93f4bd6499c99799ee"
+      "sha256": "b60d58b68bbe5be719982fbedadba1228f44c8975d4bdc93f4bd6499c99799ee",
+      "repo_id": "steering-transfer/safety-scores",
+      "repo_type": "dataset",
+      "revision": "9c6a90f745ce5875e688e0f7fdb41a442280f6bf",
+      "filename": "experiments/bilingual-refusal-v1/direction-validation.jsonl"
     }
   },
   "directions": {
     "gemma": {
       "local_path": "results/final/bilingual-refusal-v1/captures/gemma/en/directions.pt",
-      "sha256": "3357677010bbe2c84236926ee397989a43a8f7400984d549b1737c8d0daae880"
+      "sha256": "3357677010bbe2c84236926ee397989a43a8f7400984d549b1737c8d0daae880",
+      "repo_id": "steering-transfer/refusal-directions",
+      "repo_type": "model",
+      "revision": "757a72de1ac631700fc08f1e647cc23fbd56d681",
+      "filename": "experiments/bilingual-refusal-v1/gemma/en/directions.pt"
     },
     "lapa": {
       "local_path": "results/final/bilingual-refusal-v1/captures/lapa/en/directions.pt",
-      "sha256": "106c0c6259eb2a8f5cca399cdce10f7a55e34831b5099d832892ec34ef0cba3e"
+      "sha256": "106c0c6259eb2a8f5cca399cdce10f7a55e34831b5099d832892ec34ef0cba3e",
+      "repo_id": "steering-transfer/refusal-directions",
+      "repo_type": "model",
+      "revision": "757a72de1ac631700fc08f1e647cc23fbd56d681",
+      "filename": "experiments/bilingual-refusal-v1/lapa/en/directions.pt"
     }
   },
   "selections": {

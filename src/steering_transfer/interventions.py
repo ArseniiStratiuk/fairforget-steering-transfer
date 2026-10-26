@@ -61,10 +61,11 @@ def apply_intervention(model, condition):
         raise ValueError("Direction and target model hidden widths differ")
     handles = []
     calls = 0
+    device_vector = vector.to(model.model.device, dtype=torch.float32)
 
     def project(hidden):
         nonlocal calls
-        direction = vector.to(device=hidden.device, dtype=torch.float32)
+        direction = device_vector.to(device=hidden.device)
         values = hidden.float()
         calls += 1
         projection = (values @ direction).unsqueeze(-1) * direction
@@ -81,7 +82,7 @@ def apply_intervention(model, condition):
     def add_output(module, args, output):
         nonlocal calls
         hidden = output[0] if isinstance(output, tuple) else output
-        delta = condition.strength * vector.to(hidden.device, hidden.dtype)
+        delta = condition.strength * device_vector.to(hidden.device, hidden.dtype)
         shifted = hidden.clone()
         if condition.token_positions == "response":
             shifted[:, -1, :] += delta

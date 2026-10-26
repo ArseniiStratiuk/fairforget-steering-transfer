@@ -1,26 +1,55 @@
-# Data
+# Research data
 
-| Input | Local path | Source / status |
-|---|---|---|
-| 620 EN/UK safety prompt pairs | `safety/translated_formated.csv` | 100 JBB + 520 AdvBench; translations await human review; SHA256 `5135c91c972fd4362e9e02573a8635b8630ceba8c8f9a81848bf7b491483ccdf` |
-| 100 benign EN/UK pairs and review log | Pinned in `configs/datasets.json` | JBB source plus 93 approved / 7 corrected translations in one individual pass; team approval is separate |
-| Belebele EN/UK | `belebele/7899cdfa4e1e0d733fd77c848e2c273cb1d32be2/` | [facebook/belebele](https://huggingface.co/datasets/facebook/belebele), CC BY-SA 4.0; unchanged, 900 questions per language |
-| Original JBB harmful/benign tables | `jbb/886acc352a31533ffbcf4ef22c744658688086fc/` | [JBB-Behaviors](https://huggingface.co/datasets/JailbreakBench/JBB-Behaviors), upstream dataset card declares MIT |
+| Dataset | Use | Requests per language |
+|---|---|---:|
+| AdvBench + JBB, English/Ukrainian | Harmful extraction / validation / test | 128 / 64 / 339 |
+| Stanford Alpaca, English/Ukrainian | Harmless extraction / validation | 128 / 64 |
+| JBB benign, English/Ukrainian | Unwanted-refusal test | 100 |
+| Belebele, English/Ukrainian | Reading-comprehension utility | 900 |
 
-AdvBench source: [harmful behaviors](https://github.com/llm-attacks/llm-attacks/blob/main/data/advbench/harmful_behaviors.csv). The received export lacks a pinned AdvBench revision and independently verified translation-generator metadata. No license has been assigned to the translations; repository code licenses do not establish separate data rights.
+The 620 harmful source requests form 531 groups using the supplied similarity
+links and normalized exact English/Ukrainian matches. Each group contributes one
+representative. English and Ukrainian versions share split membership. Remaining
+Alpaca instructions are outside the experiment.
 
-`record_id` identifies a bilingual prompt pair. `discard` is the supplied similarity flag, not an exclusion decision; all 620 records are retained. The frozen pilot extraction and validation IDs are in `configs/experiments/refusal_transfer.json`; all JBB prompts are reserved from source selection. Translation pairs and supplied overlap groups stay together.
+Claude translations were selected by blinded comparison with Gemma and Lapa.
+Reviewer comments led to 24 corrections in the harmful dataset. The 192 Alpaca
+translations include a separate 23-row flag log describing language-dependent,
+ambiguous or malformed source instructions. Flags are not refusal labels.
 
-Inputs are research prompts, not collected personal user conversations. Original JBB fields may mention public entities; generated responses are not verified factual claims. Harmful prompts and outputs are retained for safety evaluation. Translation review must check intent and key details.
+## Sources and versions
 
-Raw files stay outside Git. Shared, private snapshots live in [prompt-pairs](https://huggingface.co/datasets/steering-transfer/prompt-pairs) and [model-answers](https://huggingface.co/datasets/steering-transfer/model-answers). Automated judge outputs and shared manual-audit IDs are in [safety-scores](https://huggingface.co/datasets/steering-transfer/safety-scores); human safety labels remain pending. `configs/artifacts.json` pins their revisions and checksums. Results notebooks load these snapshots through the local HF cache; organization membership and HF login are required. Logs and executed worker notebooks remain local and on JUPITER.
+- [Frozen paired prompts and split assignments](https://huggingface.co/datasets/steering-transfer/prompt-pairs/tree/ad61e819403256072115d9a7e52bcd006ac29f81/splits/bilingual-refusal-v1).
+  `configs/frozen_data.json` pins the release and manifest checksum. The manifest
+  records source hashes, split IDs, seed and duplicate-group membership.
+- [JBB-Behaviors](https://huggingface.co/datasets/JailbreakBench/JBB-Behaviors):
+  upstream dataset card declares MIT. The merged export contains 100 harmful
+  requests; a separate file contains 100 benign requests.
+- [AdvBench](https://github.com/llm-attacks/llm-attacks/blob/main/data/advbench/harmful_behaviors.csv):
+  520 harmful source requests. Original export hashes are recorded; its upstream
+  revision was not retained.
+- [Stanford Alpaca](https://github.com/tatsu-lab/stanford_alpaca): revision
+  `f13496211289def0ff88ae673389ae14a818b4b3`,
+  [CC BY-NC 4.0](https://github.com/tatsu-lab/stanford_alpaca/blob/main/DATA_LICENSE).
+  Only instructions are used, not generated answers or model weights.
+- [Belebele](https://huggingface.co/datasets/facebook/belebele): revision
+  `7899cdfa4e1e0d733fd77c848e2c273cb1d32be2`, CC BY-SA 4.0. The 900 questions
+  retain paired answer keys; questions sharing a passage remain linked.
 
-Harmless extraction candidates: Stanford Alpaca instructions at revision `f13496211289def0ff88ae673389ae14a818b4b3`, [CC BY-NC 4.0](https://github.com/tatsu-lab/stanford_alpaca/blob/main/DATA_LICENSE). Only self-contained instructions are sampled; generated answers and model weights are not used. The 160 candidates are pending safety and overlap review, not a frozen harmless set.
+No separate license is assigned to the translations. The repository's code
+license does not replace upstream dataset terms.
 
-## Experiment artifacts
+## Storage
 
-The reviewed experiment manifest is `configs/reviewed_experiments.json`. Versioned releases preserve raw answers, next-token utility predictions, Guard verdicts, model/input revisions and checksums. Historical sampled responses and corrected greedy v2 responses remain separate. Saved vectors and the outlier mask belong in a model artifact repository, not Git. No model weights or raw activation dump is included.
+Datasets and split manifests live in the HF dataset repository. Full generated
+answers live in the manually gated
+[model-answers](https://huggingface.co/datasets/steering-transfer/model-answers)
+repository; judge labels live in
+[safety-scores](https://huggingface.co/datasets/steering-transfer/safety-scores).
+Directions belong in the
+[model artifact repository](https://huggingface.co/steering-transfer/refusal-directions).
+Raw data, answers, tensors and logs stay outside Git.
 
-Refusal-change example eligibility is AI-assisted, not an independent human annotation dataset. The conditional seed-42 sample illustrates observed changes and is not a success-rate estimator. Ukrainian verdicts and translations remain unvalidated.
-
-Translation generation, COMET screening and blinded translation review are in `src/translation_review/`. Candidate translations and review assignments do not define scientific splits or a final ground-truth release.
+Inputs are benchmark instructions, not collected private conversations. Harmful
+requests and generated answers are research material for evaluating model
+behavior, not verified factual claims.

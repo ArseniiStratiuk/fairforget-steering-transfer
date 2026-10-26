@@ -1,10 +1,10 @@
 {
   "prompt_pairs": {
     "repo_id": "steering-transfer/prompt-pairs",
-    "filename": "prompt-pairs.csv",
-    "revision": "fa135e0b0356cf607e47e8efc939b8f4dd7d2054",
-    "sha256": "5135c91c972fd4362e9e02573a8635b8630ceba8c8f9a81848bf7b491483ccdf",
-    "local_path": "data/safety/fa135e0b0356cf607e47e8efc939b8f4dd7d2054/prompt-pairs.csv",
+    "filename": "prompt-pairs-after-review.csv",
+    "revision": "44ba917afc370a4cf3dd00aab2def6c391045f59",
+    "sha256": "71957b2ce6678e08e3d9421ff82c5a5599285d308e871a6cf503ed823000e07a",
+    "local_path": "data/safety/44ba917afc370a4cf3dd00aab2def6c391045f59/prompt-pairs-after-review.csv",
     "label": "harmful"
   },
   "jbb_benign": {

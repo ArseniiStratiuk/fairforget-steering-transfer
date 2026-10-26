@@ -27,6 +27,7 @@ def screen_refusal_directions(
     max_harmless_kl_nats,
     application_locations,
     proxy_token="I",
+    batch_size=8,
 ):
     import torch
 
@@ -40,15 +41,18 @@ def screen_refusal_directions(
     )
     if not harmful.any() or harmful.all():
         raise ValueError("Validation needs harmful and harmless examples")
-    inputs = [model.encode_prompts([prompt]) for prompt in validation_prompts.prompt]
+    if batch_size < 1:
+        raise ValueError("Validation batch size must be positive")
+    prompts = validation_prompts.prompt.tolist()
 
     def next_log_probabilities():
         logits = []
         with torch.inference_mode():
-            for encoded in inputs:
+            for start in range(0, len(prompts), batch_size):
+                encoded = model.encode_prompts(prompts[start : start + batch_size])
                 output = model.model(**encoded, use_cache=False, logits_to_keep=1)
-                logits.append(output.logits[0, -1].float())
-        return torch.stack(logits).log_softmax(-1)
+                logits.append(output.logits[:, -1].float())
+        return torch.cat(logits).log_softmax(-1)
 
     baseline = next_log_probabilities()
     screen = []

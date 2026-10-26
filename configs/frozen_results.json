@@ -1,0 +1,55 @@
+{
+  "name": "bilingual-refusal-v1",
+  "data_revision": "ad61e819403256072115d9a7e52bcd006ac29f81",
+  "storage": "local_only",
+  "files": {
+    "responses": {
+      "local_path": "results/final/bilingual-refusal-v1/release/responses.jsonl",
+      "sha256": "f640a5e70b507bfd12c85ccdd730fc37fc873a880d32461863063dff08b30448"
+    },
+    "utility": {
+      "local_path": "results/final/bilingual-refusal-v1/release/utility.jsonl",
+      "sha256": "91b83c230f7b5bd0133363f073c004c6dc4557bc65c28af3e0e5e4b37fb7148a"
+    },
+    "evaluations": {
+      "local_path": "results/final/bilingual-refusal-v1/release/evaluations.jsonl",
+      "sha256": "fe8a24ad35458bf0e3fb31ba2d1093889a88bb7956114dea03ff2ac5fa7b2c97"
+    },
+    "behavior": {
+      "local_path": "results/final/bilingual-refusal-v1/release/behavior.jsonl",
+      "sha256": "22901482973573f399ba70f58536ddff20a58d9d289f387ce8381b743c68c505"
+    },
+    "validation": {
+      "local_path": "results/final/bilingual-refusal-v1/release/validation.jsonl",
+      "sha256": "b60d58b68bbe5be719982fbedadba1228f44c8975d4bdc93f4bd6499c99799ee"
+    }
+  },
+  "directions": {
+    "gemma": {
+      "local_path": "results/final/bilingual-refusal-v1/captures/gemma/en/directions.pt",
+      "sha256": "3357677010bbe2c84236926ee397989a43a8f7400984d549b1737c8d0daae880"
+    },
+    "lapa": {
+      "local_path": "results/final/bilingual-refusal-v1/captures/lapa/en/directions.pt",
+      "sha256": "106c0c6259eb2a8f5cca399cdce10f7a55e34831b5099d832892ec34ef0cba3e"
+    }
+  },
+  "selections": {
+    "gemma": {
+      "layer": 32,
+      "excluded_coordinates": [
+        2339
+      ],
+      "max_harmless_kl_nats": 0.1,
+      "data_revision": "ad61e819403256072115d9a7e52bcd006ac29f81"
+    },
+    "lapa": {
+      "layer": 34,
+      "excluded_coordinates": [
+        2339
+      ],
+      "max_harmless_kl_nats": 0.1,
+      "data_revision": "ad61e819403256072115d9a7e52bcd006ac29f81"
+    }
+  }
+}

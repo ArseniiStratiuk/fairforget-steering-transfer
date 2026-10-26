@@ -21,7 +21,7 @@ def resolve_dataset_file(root, specification):
                 hf_hub_download(
                     specification["repo_id"],
                     specification["filename"],
-                    repo_type="dataset",
+                    repo_type=specification.get("repo_type", "dataset"),
                     revision=specification["revision"],
                 )
             )
@@ -45,6 +45,37 @@ def load_prompt_pairs(root):
     if frame.record_id.duplicated().any():
         raise ValueError("Duplicate source record IDs")
     return frame
+
+
+def load_frozen_prompts(root, split=None, language=None):
+    configuration = json.loads((Path(root) / "configs/frozen_data.json").read_text())
+    directory = configuration["directory"]
+    manifest_source = {
+        **configuration,
+        "filename": f"{directory}/manifest.json",
+        "local_path": f"{configuration['local_path']}/manifest.json",
+        "sha256": configuration["manifest_sha256"],
+    }
+    manifest = json.loads(resolve_dataset_file(root, manifest_source).read_text())
+    records_source = {
+        **configuration,
+        "filename": f"{directory}/prompts.jsonl",
+        "local_path": f"{configuration['local_path']}/prompts.jsonl",
+        "sha256": manifest["files"]["prompts.jsonl"],
+    }
+    records = pd.read_json(
+        resolve_dataset_file(root, records_source), lines=True, dtype={"source_id": str}
+    )
+    if records.prompt_id.duplicated().any() or records.prompt.str.strip().eq("").any():
+        raise ValueError("Frozen prompts must have unique IDs and nonempty text")
+    records["dataset_revision"] = configuration["revision"]
+    if split is not None:
+        if split not in {"extraction", "validation", "test"}:
+            raise ValueError("Unknown frozen split")
+        records = records.loc[records.split.eq(split)]
+    if language is not None:
+        records = records.loc[records.language.eq(LANGUAGE_CODES[language])]
+    return records.reset_index(drop=True)
 
 
 def load_prompt_dataset(root, dataset, revision, split, language, subset_ids=None):
@@ -87,46 +118,10 @@ def load_prompt_dataset(root, dataset, revision, split, language, subset_ids=Non
     return prompts
 
 
-def load_extraction_prompts(root, split="extraction"):
-    configuration = json.loads(
-        (Path(root) / "configs/experiments/refusal_transfer.json").read_text()
-    )
-    frozen = configuration["frozen_split"]
+def load_extraction_prompts(root, split="extraction", language="en"):
     if split not in {"extraction", "validation"}:
         raise ValueError("Extraction data split must be extraction or validation")
-    harmful = load_prompt_pairs(root).set_index("record_id", verify_integrity=True)
-    harmless = pd.read_json(
-        resolve_dataset_file(root, load_dataset_sources(root)["alpaca"])
-    )
-    harmful_ids = frozen[f"harmful_{split}_ids"]
-    harmless_ids = frozen[f"harmless_{split}_rows"]
-    records = []
-    for source, ids, frame, column, label in [
-        ("advbench", harmful_ids, harmful, "goal", "harmful"),
-        ("alpaca", harmless_ids, harmless, "instruction", "harmless"),
-    ]:
-        selected = frame.loc[ids]
-        if source == "advbench" and not selected.source.eq("AdvBench").all():
-            raise ValueError("Extraction IDs must come from AdvBench")
-        if source == "alpaca" and not selected.input.str.strip().eq("").all():
-            raise ValueError("Frozen Alpaca examples require empty inputs")
-        for source_id, row in selected.iterrows():
-            records.append(
-                {
-                    "prompt_id": f"{source}:{source_id}:en",
-                    "source_id": str(source_id),
-                    "semantic_request_id": f"{source}:{source_id}",
-                    "dataset": source,
-                    "dataset_revision": frozen["prompt_pairs"]["revision"]
-                    if source == "advbench"
-                    else frozen["alpaca"]["revision"],
-                    "split": split,
-                    "language": "en",
-                    "label": label,
-                    "prompt": row[column],
-                }
-            )
-    return pd.DataFrame(records)
+    return load_frozen_prompts(root, split=split, language=language)
 
 
 def load_multiple_choice_dataset(root, dataset, revision, split, language):

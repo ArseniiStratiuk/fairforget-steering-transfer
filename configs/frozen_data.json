@@ -1,0 +1,7 @@
+{
+  "repo_id": "steering-transfer/prompt-pairs",
+  "revision": "ad61e819403256072115d9a7e52bcd006ac29f81",
+  "directory": "splits/bilingual-refusal-v1",
+  "local_path": "data/frozen/bilingual-refusal-v1",
+  "manifest_sha256": "df4048f6fe967624fe5fa754c48bd5c61b20bdefeb250996217a1a4ac5c4bef2"
+}

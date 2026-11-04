@@ -98,7 +98,7 @@ instructions have paired Ukrainian translations. Belebele measures reading utili
 
 - [Dataset review](notebooks/research/01_dataset_review.ipynb): bilingual prompts, translations, splits and Belebele.
 - [Refusal transfer](notebooks/research/02_refusal_transfer.ipynb): extraction through safety/utility results.
-- [Persona steering](notebooks/research/03_persona_steering.ipynb): contrasting response personas and activation steering.
+- [Judge comparison](notebooks/research/03_judge_comparison.ipynb): calibrated judges, bilingual agreement, cost and error examples.
 
 Translation candidate generation, COMET screening and blinded review commands:
 [src/translation_review](src/translation_review/README.md).

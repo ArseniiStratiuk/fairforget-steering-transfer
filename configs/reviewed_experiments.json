@@ -223,5 +223,92 @@
         "bytes": 217212
       }
     ]
+  },
+  "judge_comparison": {
+    "repo_id": "steering-transfer/safety-scores",
+    "repo_type": "dataset",
+    "revision": "43bb25337fcb94e1e15f4d22d14d51e2914d2c55",
+    "files": [
+      {
+        "local_path": "outputs/publication/joint-judge-comparison-2026-11-04/README.md",
+        "filename": "joint-judge-comparison-2026-11-04/README.md",
+        "sha256": "acb97f06f8f55df46d31612d70d334b9e01c1d4826e2c4041a194339ecba0ff3"
+      },
+      {
+        "local_path": "outputs/publication/joint-judge-comparison-2026-11-04/calibration.jsonl",
+        "filename": "joint-judge-comparison-2026-11-04/calibration.jsonl",
+        "sha256": "b57a13115b3509e10f8321f267042dd558e7a4a62977879513a54b866f105c6f"
+      },
+      {
+        "local_path": "outputs/publication/joint-judge-comparison-2026-11-04/comparison-by-language.csv",
+        "filename": "joint-judge-comparison-2026-11-04/comparison-by-language.csv",
+        "sha256": "b3e2180a88857c1d162c16c7263584518943604cea635f1561702f6c816211f4"
+      },
+      {
+        "local_path": "outputs/publication/joint-judge-comparison-2026-11-04/comparison-summary.csv",
+        "filename": "joint-judge-comparison-2026-11-04/comparison-summary.csv",
+        "sha256": "fcee3f52f976893d0c7c6de0327d41c7ce9612e7f8691b7e2f523335a43fb001"
+      },
+      {
+        "local_path": "outputs/publication/joint-judge-comparison-2026-11-04/comparison-usage.csv",
+        "filename": "joint-judge-comparison-2026-11-04/comparison-usage.csv",
+        "sha256": "73e9591cfbe26af257eee766fe4ce829473283d622c11a26e8a1f5b28155246a"
+      },
+      {
+        "local_path": "outputs/publication/joint-judge-comparison-2026-11-04/comparison.jsonl",
+        "filename": "joint-judge-comparison-2026-11-04/comparison.jsonl",
+        "sha256": "77dbd376560d3c72a99f254ff8c02655c6a0c809bceb57969e124a6d880e1268"
+      },
+      {
+        "local_path": "outputs/publication/joint-judge-comparison-2026-11-04/compute-usage.csv",
+        "filename": "joint-judge-comparison-2026-11-04/compute-usage.csv",
+        "sha256": "1bb7bea89ce8b477671d0eb5e76adb50a49ccf9bf804774ef0442ab00bbc5124"
+      },
+      {
+        "local_path": "outputs/publication/joint-judge-comparison-2026-11-04/judge-ranking.csv",
+        "filename": "joint-judge-comparison-2026-11-04/judge-ranking.csv",
+        "sha256": "48608f5b7553b63ef405da5f1935389054fd5eb1ec13d6df58cb4cf2c23b7a26"
+      },
+      {
+        "local_path": "outputs/publication/joint-judge-comparison-2026-11-04/models.json",
+        "filename": "joint-judge-comparison-2026-11-04/models.json",
+        "sha256": "4c3235e9c758b6666dfbca7a947aab10f130cd805f315213ca3ff1a6589af742"
+      },
+      {
+        "local_path": "outputs/publication/joint-judge-comparison-2026-11-04/per-label-metrics.csv",
+        "filename": "joint-judge-comparison-2026-11-04/per-label-metrics.csv",
+        "sha256": "255e97617f1e0afa61a55eb3ff10ff3f08806e08a90e1478c724dd17fb45e72d"
+      },
+      {
+        "local_path": "outputs/publication/joint-judge-comparison-2026-11-04/predictions.jsonl",
+        "filename": "joint-judge-comparison-2026-11-04/predictions.jsonl",
+        "sha256": "dccee7a70b56329e831c09c1296ad49c3cfc31e0f3097f3345402b539dfa2b9f"
+      },
+      {
+        "local_path": "outputs/publication/joint-judge-comparison-2026-11-04/pricing.json",
+        "filename": "joint-judge-comparison-2026-11-04/pricing.json",
+        "sha256": "86f234f71a1940237fc451262ba9d01944d9819f06a94fe094362b0ecbaa87d6"
+      },
+      {
+        "local_path": "outputs/publication/joint-judge-comparison-2026-11-04/public-error-examples.json",
+        "filename": "joint-judge-comparison-2026-11-04/public-error-examples.json",
+        "sha256": "f1613ca1d47fcf56fe379cfe281be9ec7f0a25b613cdc16fee4262733bb2a7f9"
+      },
+      {
+        "local_path": "outputs/publication/joint-judge-comparison-2026-11-04/selected-judge-config.json",
+        "filename": "joint-judge-comparison-2026-11-04/selected-judge-config.json",
+        "sha256": "8546c77c99b698debe3789407f9308623d06c0c793c4f2633d49225e39eafca0"
+      },
+      {
+        "local_path": "outputs/publication/joint-judge-comparison-2026-11-04/selected-judge.json",
+        "filename": "joint-judge-comparison-2026-11-04/selected-judge.json",
+        "sha256": "d62b56370d5805cea5f8185dd9a9acd6c44580bd2454bc83738d77f74c1b0dca"
+      },
+      {
+        "local_path": "outputs/publication/joint-judge-comparison-2026-11-04/zero-shot-rubrics.json",
+        "filename": "joint-judge-comparison-2026-11-04/zero-shot-rubrics.json",
+        "sha256": "5822adc112a6f1eb883dd615264e3f750b358730b2d6e6ef718ce26cfc7dff57"
+      }
+    ]
   }
 }

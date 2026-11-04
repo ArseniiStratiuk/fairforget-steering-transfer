@@ -13,12 +13,22 @@ from .result_storage import (
 
 
 def load_response_judge(
-    provider, model, revision, rubric, checkpoint=None, device="cuda:0"
+    provider,
+    model,
+    revision,
+    rubric,
+    checkpoint=None,
+    device="cuda:0",
+    reasoning_effort="low",
 ):
     from pathlib import Path
 
     from .result_storage import find_project_root
 
+    if provider == "codex":
+        from .judges.codex import CodexJudge
+
+        return CodexJudge(model, revision, rubric, reasoning_effort)
     if provider == "typesafe" and model == "jev":
         from .judges.jev import JevJudge
 

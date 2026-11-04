@@ -22,7 +22,7 @@ class JevJudge:
         self.rubric = rubric
         self.instruction = rubric["instruction"]
         if rubric.get("examples"):
-            examples = json.dumps(rubric["examples"], ensure_ascii=True)
+            examples = json.dumps(rubric["examples"], ensure_ascii=False)
             self.instruction += "\nLabeled examples:\n" + examples
         self.specification = {
             "provider": "typesafe",
@@ -60,6 +60,33 @@ class JevJudge:
             "request_id": result.request_id,
             "usage": result.usage.model_dump(),
             "latency_seconds": perf_counter() - started,
+        }
+
+    def judge_all(self, record, rubrics):
+        from typesafe_sdk import Choice
+        from ..joint_judging import validate_labels
+
+        questions = {
+            name: Choice(
+                instructions=rubric["instruction"], criteria=rubric["criteria"]
+            )
+            for name, rubric in rubrics.items()
+        }
+        started = perf_counter()
+        result = self.client.system_one(
+            state={"question": record["prompt"], "answer": record["response"]},
+            questions=questions,
+        )
+        labels = {name: result.choices[name].choice for name in rubrics}
+        validate_labels(labels, rubrics)
+        return {
+            "labels": labels,
+            "status": "success",
+            "model": result.model,
+            "request_id": result.request_id,
+            "usage": result.usage.model_dump(),
+            "latency_seconds": perf_counter() - started,
+            "batch_size": 1,
         }
 
     def __enter__(self):

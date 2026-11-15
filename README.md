@@ -238,7 +238,8 @@ response annotation are separate from model judgments.
 
 ## Acknowledgments
 
-We acknowledge EuroHPC Joint Undertaking for awarding us access to JUPITER Booster at the Jülich
+Viktoriia Makovska was partially supported by the Women Led Science grant program of INSCIENCE
+and the Tokarev Foundation. We acknowledge EuroHPC Joint Undertaking for awarding us access to JUPITER Booster at the Jülich
 Supercomputing Centre (JSC), Germany. The FairForget project (EHPC-DEV-2026D09-075) was awarded
 3,500 node hours. ELEKS supported this project through a grant dedicated to the memory of Oleksiy
 Skrypnyk.

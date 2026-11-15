@@ -29,6 +29,7 @@ recipient data, training or mappings.
 - `scripts/donor_baseline.py`: unmodified donor answers on the test split (E0).
 - `scripts/system_prompt_and_guard_summary.py`: safety system-prompt rates with paired intervals and Llama Guard 4 unsafe rates per condition (output in `results/tables/system_prompt_and_guard_summary.txt`).
 - `results/judge/guard_reference/labels.jsonl`: Llama Guard 4 verdicts on the 120 human-labeled answers; `results/judge/hand_check_steered_answers.csv`: two annotators, agreed and Jev labels for 28 steered answers; `scripts/donor_baselines_and_guard_reference.py` and `results/tables/donor_baselines_and_guard_reference.txt`: unmodified donor rates (E0) and Guard agreement.
+- `figures/`: Figure 1 and Table 2 of the paper as images, with their standalone LaTeX sources.
 - `launchers/`: Slurm launchers as run (one node with four GPUs, or one GPU per shard).
 - `results/tables/`: the numbers behind the paper's tables: rates, paired changes from the
   unmodified model and direct borrowed-minus-reference differences, with 95% bootstrap

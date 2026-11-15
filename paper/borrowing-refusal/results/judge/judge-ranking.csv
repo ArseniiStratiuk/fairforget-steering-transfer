@@ -1,0 +1,5 @@
+judge,configuration,mean_macro_f1,estimated_usd
+jev,zero-shot,0.7862703627636191,0.007905786000000001
+terra,zero-shot,0.7426005320275096,0.5500820000000001
+gpt-oss,zero-shot,0.7317196264052214,
+gemma,zero-shot,0.6365821685024584,

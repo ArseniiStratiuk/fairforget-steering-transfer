@@ -1,0 +1,13 @@
+{
+  "multiplier": 1.0,
+  "coherent_refusals": 32.0,
+  "incoherent": 1.0,
+  "answers": 64.0,
+  "strength": 666.96484375,
+  "layer": 16,
+  "configuration_hash": "09b2c1d3b0dd866f4ad9c877378e38772c728dd156831e5070965407997f9320",
+  "direction_hash": "74d49f5f3cbd9368cca803c6b09d5f950f9a2141b88df0c1df3f0c0a19493461",
+  "validation_hash": "61761861335aafe7807c020a2fc3fb41d7d423285347c00a93a893c8068eea51",
+  "selection_rule": "most coherent refusals, then fewest incoherent answers, then smallest multiplier",
+  "trials_hash": "0babef0e4476879d417efb6dc17481a11233af46a40f7bd6774d5c4d194068f4"
+}

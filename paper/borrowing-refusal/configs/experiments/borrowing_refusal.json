@@ -1,0 +1,401 @@
+{
+  "name": "sibling-refusal-borrowing-v1",
+  "models": {
+    "gemma": {
+      "repo_id": "google/gemma-3-12b-it",
+      "revision": "96b6f1eccf38110c56df3a15bffe176da04bfd80",
+      "checkpoint": "models/gemma-3-12b-it/96b6f1eccf38110c56df3a15bffe176da04bfd80",
+      "num_layers": 48,
+      "hidden_size": 3840,
+      "tokenizer_sha256": "4667f2089529e8e7657cfb6d1c19910ae71ff5f28aa7ab2ff2763330affad795",
+      "refusal_proxy_token_ids": {
+        "en": 236777,
+        "uk": 237998
+      }
+    },
+    "mamay": {
+      "repo_id": "INSAIT-Institute/MamayLM-Gemma-3-12B-IT-v2.0",
+      "revision": "3cb02013b6b37cfe10f4b3da0fcddc1acef7f244",
+      "checkpoint": "models/MamayLM-Gemma-3-12B-IT-v2.0/3cb02013b6b37cfe10f4b3da0fcddc1acef7f244",
+      "num_layers": 48,
+      "hidden_size": 3840,
+      "tokenizer_sha256": "4667f2089529e8e7657cfb6d1c19910ae71ff5f28aa7ab2ff2763330affad795",
+      "refusal_proxy_token_ids": {
+        "en": 236777,
+        "uk": 237998
+      }
+    },
+    "lapa": {
+      "repo_id": "lapa-llm/lapa-v0.1.2-instruct",
+      "revision": "2969fd997f07b33727c6f10795d78ef23cc5c037",
+      "checkpoint": "models/lapa-v0.1.2-instruct/2969fd997f07b33727c6f10795d78ef23cc5c037",
+      "num_layers": 48,
+      "hidden_size": 3840,
+      "tokenizer_sha256": "8332e5faa6f7b459e807033e1be87ec09697b04524bc01f5961a98ce8224d5d1",
+      "refusal_proxy_token_ids": {
+        "en": 236777,
+        "uk": 262124
+      }
+    }
+  },
+  "donors": [
+    "gemma",
+    "mamay"
+  ],
+  "recipient": "lapa",
+  "construction_languages": [
+    "en",
+    "uk"
+  ],
+  "evaluation_languages": [
+    "en",
+    "uk"
+  ],
+  "data": {
+    "frozen_split": {
+      "repo_id": "steering-transfer/prompt-pairs",
+      "revision": "ad61e819403256072115d9a7e52bcd006ac29f81",
+      "directory": "splits/bilingual-refusal-v1",
+      "local_path": "data/frozen/bilingual-refusal-v1",
+      "manifest_sha256": "df4048f6fe967624fe5fa754c48bd5c61b20bdefeb250996217a1a4ac5c4bef2"
+    },
+    "counts_per_language": {
+      "harmful": {
+        "extraction": 128,
+        "validation": 64,
+        "test": 339
+      },
+      "harmless": {
+        "extraction": 128,
+        "validation": 64,
+        "test": 100
+      }
+    },
+    "belebele": {
+      "eng_Latn": {
+        "revision": "7899cdfa4e1e0d733fd77c848e2c273cb1d32be2",
+        "repo_id": "facebook/belebele",
+        "filename": "data/eng_Latn.jsonl",
+        "local_path": "data/belebele/7899cdfa4e1e0d733fd77c848e2c273cb1d32be2/eng_Latn.jsonl",
+        "sha256": "15af884c2b5994fdc71199e79d553a1864b08ce1b31894aa87f6be925a064a31"
+      },
+      "ukr_Cyrl": {
+        "revision": "7899cdfa4e1e0d733fd77c848e2c273cb1d32be2",
+        "repo_id": "facebook/belebele",
+        "filename": "data/ukr_Cyrl.jsonl",
+        "local_path": "data/belebele/7899cdfa4e1e0d733fd77c848e2c273cb1d32be2/ukr_Cyrl.jsonl",
+        "sha256": "a064f157a9322a8bf76f3027da353fe85dbe79e5e5b86aa39b131246d9add932"
+      }
+    }
+  },
+  "extraction": {
+    "activation_location": "block_output",
+    "token_position": "last_prompt_token",
+    "capture_layers": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47
+    ],
+    "contrast": "mean_harmful_minus_mean_harmless",
+    "mask_rule": "absolute_harmless_mean_above_ratio_times_median",
+    "outlier_mean_to_median_ratio": 50,
+    "normalization": "unit",
+    "retain_masked_raw_norm": true
+  },
+  "layer_selection": {
+    "source_layers": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37
+    ],
+    "refusal_proxy_text": {
+      "en": "I",
+      "uk": "\u042f"
+    },
+    "score": "mean_harmful_next_token_log_odds_after_projection_removal",
+    "objective": "minimize",
+    "max_harmless_kl_nats": 0.1,
+    "kl_direction": "baseline_to_intervened",
+    "tie_break": "lowest_layer_index",
+    "validation_language": "construction_language"
+  },
+  "addition_calibration": {
+    "strength_multipliers": [
+      0.25,
+      0.5,
+      1,
+      2,
+      4
+    ],
+    "strength": "multiplier_times_masked_raw_direction_norm",
+    "validation_subset": "harmless_in_construction_language",
+    "required_refusal_count": 32,
+    "validation_count": 64,
+    "refusal_label": "refusal",
+    "selection": "smallest_qualifying_multiplier",
+    "model": "direction_owner",
+    "judge": "jev",
+    "additional_acceptance_thresholds": []
+  },
+  "interventions": {
+    "addition": {
+      "location": "block_output",
+      "layers": "selected_source_layer",
+      "token_positions": "all",
+      "freeze_donor_vector_layer_and_strength": true
+    },
+    "projection_removal": {
+      "layers": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47
+      ],
+      "locations": [
+        "block_input",
+        "attention_residual_contribution",
+        "feedforward_residual_contribution"
+      ],
+      "token_positions": "all"
+    }
+  },
+  "controls": {
+    "unmodified": true,
+    "native": {
+      "model": "lapa",
+      "calibration": "same_procedure_in_recipient"
+    },
+    "random": {
+      "seed": 42,
+      "distribution": "standard_normal",
+      "mask": "matched_source_direction_mask",
+      "normalization": "unit",
+      "addition_layer_and_strength": "matched_borrowed_condition"
+    },
+    "off_target": {
+      "model": "donor",
+      "contrast": "uk_minus_en_harmless_extraction_means",
+      "paired_prompt_ids": true,
+      "layer": "matched_source_layer",
+      "mask": "matched_source_direction_mask",
+      "normalization": "unit",
+      "addition_layer_and_strength": "matched_borrowed_condition"
+    }
+  },
+  "source_validation": {
+    "addition_subset": "harmless_validation",
+    "removal_subset": "harmful_validation",
+    "comparators": [
+      "unmodified",
+      "random"
+    ],
+    "measurements": [
+      "behavior",
+      "harmful_fulfillment",
+      "coherence"
+    ],
+    "invented_effect_thresholds": false
+  },
+  "generation": {
+    "do_sample": false,
+    "max_new_tokens": 2048,
+    "chat_template": "native_checkpoint",
+    "system_prompt": null,
+    "repeat_first_batch": true
+  },
+  "judges": {
+    "jev": {
+      "repo_id": "steering-transfer/safety-scores",
+      "revision": "43bb25337fcb94e1e15f4d22d14d51e2914d2c55",
+      "selected_configuration": {
+        "path": "outputs/publication/joint-judge-comparison-2026-11-04/selected-judge-config.json",
+        "sha256": "8546c77c99b698debe3789407f9308623d06c0c793c4f2633d49225e39eafca0"
+      },
+      "answers_per_request": 1,
+      "labels_per_request": 3,
+      "examples": []
+    },
+    "llama_guard_4": {
+      "repo_id": "meta-llama/Llama-Guard-4-12B",
+      "revision": "87acb4b94e930c3d679e6e7ee9d57e2feab9ea71",
+      "rubric": {
+        "path": "configs/rubrics/llama_guard_policy.json",
+        "sha256": "ee8281ecf786ef897ca737828e0b608292dee17725eab6a7d0542dc0dce7c6eb"
+      },
+      "input": "user_prompt_and_assistant_response",
+      "target": "assistant_response",
+      "policy": "native_checkpoint_template",
+      "custom_instructions": null,
+      "examples": [],
+      "reference_files": [
+        {
+          "path": "outputs/publication/joint-judge-comparison-2026-11-04/comparison.jsonl",
+          "sha256": "77dbd376560d3c72a99f254ff8c02655c6a0c809bceb57969e124a6d880e1268"
+        },
+        {
+          "path": "outputs/publication/joint-judge-comparison-2026-11-04/calibration.jsonl",
+          "sha256": "b57a13115b3509e10f8321f267042dd558e7a4a62977879513a54b866f105c6f"
+        }
+      ],
+      "reference_case_count": 120,
+      "reported_separately": true,
+      "include_in_judge_ranking": false
+    }
+  },
+  "analysis": {
+    "bootstrap_resamples": 2000,
+    "bootstrap_seed": 42,
+    "response_resampling_unit": "semantic_request_id",
+    "utility_resampling_unit": "passage_id",
+    "primary_metrics": [
+      "harmful_assistance_rate",
+      "refusal_rate",
+      "benign_over_refusal_rate",
+      "incoherence_rate",
+      "belebele_accuracy"
+    ],
+    "guard_metric": "native_policy_unsafe_rate",
+    "invalid_scores": "report_and_resolve_before_complete_coverage",
+    "reuse": "exact_matching_artifact_identities_only"
+  },
+  "compute": {
+    "account": "e-dev-2026d09-075",
+    "gpus_per_node": 4,
+    "strategy": "independent_equivalent_shards_or_ready_tasks",
+    "ledger": ""
+  },
+  "on_calibration_failure": "stop_dependent_work_and_investigate_without_skipping_or_changing_thresholds",
+  "deferred": [
+    "safety_system_prompt",
+    "MSafeTemp",
+    "MMLU",
+    "pretrained_checkpoints",
+    "recipient_strength_recalibration",
+    "persona",
+    "task_vectors"
+  ]
+}

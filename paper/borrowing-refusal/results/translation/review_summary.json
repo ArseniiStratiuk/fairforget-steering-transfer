@@ -1,0 +1,545 @@
+{
+  "files": [
+    "returned/review_reviewer_1.xlsx",
+    "returned/review_reviewer_2.xlsx"
+  ],
+  "reviewers_scored": [
+    "reviewer_1",
+    "reviewer_2"
+  ],
+  "reviewers_not_scored": [
+    "reviewer_3"
+  ],
+  "ratings": 1200,
+  "prompts_scored": 400,
+  "records_scored": 310,
+  "agreement": {
+    "reviewers": 2,
+    "shared_prompts": 90,
+    "alpha_adequacy": 0.5547656869002817,
+    "alpha_fluency": 0.4427709211774775,
+    "alpha_rank": 0.536818841906255,
+    "all_reviewers_same_best": 0.6888888888888889,
+    "level": "tentative"
+  },
+  "system_scores": [
+    {
+      "metric": "adequacy",
+      "system": "gemma",
+      "mean": 3.882258064516129,
+      "ci_low": 3.832258064516129,
+      "ci_high": 3.9226209677419352
+    },
+    {
+      "metric": "adequacy",
+      "system": "lapa",
+      "mean": 3.9080645161290324,
+      "ci_low": 3.8693548387096772,
+      "ci_high": 3.9468145161290322
+    },
+    {
+      "metric": "adequacy",
+      "system": "claude",
+      "mean": 3.953225806451613,
+      "ci_low": 3.925806451612903,
+      "ci_high": 3.975806451612903
+    },
+    {
+      "metric": "fluency",
+      "system": "gemma",
+      "mean": 3.5693548387096774,
+      "ci_low": 3.5,
+      "ci_high": 3.6370967741935485
+    },
+    {
+      "metric": "fluency",
+      "system": "lapa",
+      "mean": 3.588709677419355,
+      "ci_low": 3.5193548387096776,
+      "ci_high": 3.6564516129032256
+    },
+    {
+      "metric": "fluency",
+      "system": "claude",
+      "mean": 3.720967741935484,
+      "ci_low": 3.6693548387096775,
+      "ci_high": 3.77258064516129
+    },
+    {
+      "metric": "rank",
+      "system": "gemma",
+      "mean": 1.4161290322580644,
+      "ci_low": 1.346774193548387,
+      "ci_high": 1.4903225806451612
+    },
+    {
+      "metric": "rank",
+      "system": "lapa",
+      "mean": 1.435483870967742,
+      "ci_low": 1.3693548387096774,
+      "ci_high": 1.5
+    },
+    {
+      "metric": "rank",
+      "system": "claude",
+      "mean": 1.2661290322580645,
+      "ci_low": 1.214475806451613,
+      "ci_high": 1.320967741935484
+    },
+    {
+      "metric": "best",
+      "system": "gemma",
+      "mean": 0.682258064516129,
+      "ci_low": 0.6306451612903226,
+      "ci_high": 0.7322580645161291
+    },
+    {
+      "metric": "best",
+      "system": "lapa",
+      "mean": 0.6516129032258065,
+      "ci_low": 0.6016129032258064,
+      "ci_high": 0.7016129032258065
+    },
+    {
+      "metric": "best",
+      "system": "claude",
+      "mean": 0.7838709677419354,
+      "ci_low": 0.7387096774193549,
+      "ci_high": 0.8274193548387097
+    },
+    {
+      "metric": "critical",
+      "system": "gemma",
+      "mean": 0.037096774193548385,
+      "ci_low": 0.017741935483870968,
+      "ci_high": 0.05967741935483871
+    },
+    {
+      "metric": "critical",
+      "system": "lapa",
+      "mean": 0.025806451612903226,
+      "ci_low": 0.00967741935483871,
+      "ci_high": 0.04516129032258064
+    },
+    {
+      "metric": "critical",
+      "system": "claude",
+      "mean": 0.024193548387096774,
+      "ci_low": 0.008064516129032258,
+      "ci_high": 0.041935483870967745
+    }
+  ],
+  "pairwise": [
+    {
+      "a": "gemma",
+      "b": "lapa",
+      "records": 310,
+      "preference_a_over_b": 0.024193548387096774,
+      "pref_ci_low": -0.043548387096774194,
+      "pref_ci_high": 0.08874999999999979,
+      "pref_interval_excludes_0": false,
+      "a_ranked_better": 0.19,
+      "b_ranked_better": 0.17,
+      "tied": 0.64,
+      "adequacy_a_minus_b": -0.025806451612903226,
+      "adeq_ci_low": -0.07741935483870968,
+      "adeq_ci_high": 0.02258064516129032
+    },
+    {
+      "a": "gemma",
+      "b": "claude",
+      "records": 310,
+      "preference_a_over_b": -0.10806451612903226,
+      "pref_ci_low": -0.17580645161290323,
+      "pref_ci_high": -0.040282258064516345,
+      "pref_interval_excludes_0": true,
+      "a_ranked_better": 0.1675,
+      "b_ranked_better": 0.2675,
+      "tied": 0.565,
+      "adequacy_a_minus_b": -0.07096774193548387,
+      "adeq_ci_low": -0.11935483870967742,
+      "adeq_ci_high": -0.02903225806451613
+    },
+    {
+      "a": "lapa",
+      "b": "claude",
+      "records": 310,
+      "preference_a_over_b": -0.14677419354838708,
+      "pref_ci_low": -0.21616935483870967,
+      "pref_ci_high": -0.07258064516129033,
+      "pref_interval_excludes_0": true,
+      "a_ranked_better": 0.165,
+      "b_ranked_better": 0.3,
+      "tied": 0.535,
+      "adequacy_a_minus_b": -0.04516129032258064,
+      "adeq_ci_low": -0.08875,
+      "adeq_ci_high": 0.0016129032258064516
+    }
+  ],
+  "issue_shares": {
+    "gemma": {
+      "none": 0.8175,
+      "meaning changed": 0.0175,
+      "content added": 0.0075,
+      "content dropped": 0.0075,
+      "formal register": 0,
+      "untranslated words": 0.0025,
+      "grammar or fluency": 0.13,
+      "name or term error": 0.015,
+      "other": 0.0025
+    },
+    "lapa": {
+      "none": 0.86,
+      "meaning changed": 0.0075,
+      "content added": 0.0075,
+      "content dropped": 0.005,
+      "formal register": 0,
+      "untranslated words": 0.0075,
+      "grammar or fluency": 0.09,
+      "name or term error": 0.0175,
+      "other": 0.005
+    },
+    "claude": {
+      "none": 0.8875,
+      "meaning changed": 0.0025,
+      "content added": 0.0075,
+      "content dropped": 0.01,
+      "formal register": 0,
+      "untranslated words": 0.0,
+      "grammar or fluency": 0.08,
+      "name or term error": 0.0075,
+      "other": 0.005
+    }
+  },
+  "per_reviewer": {
+    "reviewer_1": {
+      "system_scores": [
+        {
+          "metric": "adequacy",
+          "system": "gemma",
+          "mean": 3.865,
+          "ci_low": 3.805,
+          "ci_high": 3.925
+        },
+        {
+          "metric": "adequacy",
+          "system": "lapa",
+          "mean": 3.935,
+          "ci_low": 3.89,
+          "ci_high": 3.975
+        },
+        {
+          "metric": "adequacy",
+          "system": "claude",
+          "mean": 3.975,
+          "ci_low": 3.94,
+          "ci_high": 4.0
+        },
+        {
+          "metric": "fluency",
+          "system": "gemma",
+          "mean": 3.45,
+          "ci_low": 3.3598749999999997,
+          "ci_high": 3.54
+        },
+        {
+          "metric": "fluency",
+          "system": "lapa",
+          "mean": 3.465,
+          "ci_low": 3.375,
+          "ci_high": 3.555
+        },
+        {
+          "metric": "fluency",
+          "system": "claude",
+          "mean": 3.635,
+          "ci_low": 3.565,
+          "ci_high": 3.7001249999999994
+        },
+        {
+          "metric": "rank",
+          "system": "gemma",
+          "mean": 1.535,
+          "ci_low": 1.445,
+          "ci_high": 1.63
+        },
+        {
+          "metric": "rank",
+          "system": "lapa",
+          "mean": 1.55,
+          "ci_low": 1.46,
+          "ci_high": 1.64
+        },
+        {
+          "metric": "rank",
+          "system": "claude",
+          "mean": 1.32,
+          "ci_low": 1.245,
+          "ci_high": 1.4
+        },
+        {
+          "metric": "best",
+          "system": "gemma",
+          "mean": 0.595,
+          "ci_low": 0.53,
+          "ci_high": 0.66
+        },
+        {
+          "metric": "best",
+          "system": "lapa",
+          "mean": 0.55,
+          "ci_low": 0.48,
+          "ci_high": 0.62
+        },
+        {
+          "metric": "best",
+          "system": "claude",
+          "mean": 0.735,
+          "ci_low": 0.675,
+          "ci_high": 0.795
+        },
+        {
+          "metric": "critical",
+          "system": "gemma",
+          "mean": 0.05,
+          "ci_low": 0.025,
+          "ci_high": 0.08
+        },
+        {
+          "metric": "critical",
+          "system": "lapa",
+          "mean": 0.025,
+          "ci_low": 0.005,
+          "ci_high": 0.05
+        },
+        {
+          "metric": "critical",
+          "system": "claude",
+          "mean": 0.025,
+          "ci_low": 0.005,
+          "ci_high": 0.045
+        }
+      ],
+      "pairwise": [
+        {
+          "a": "gemma",
+          "b": "lapa",
+          "records": 200,
+          "preference_a_over_b": 0.025,
+          "pref_ci_low": -0.06512499999999999,
+          "pref_ci_high": 0.12,
+          "pref_interval_excludes_0": false,
+          "a_ranked_better": 0.25,
+          "b_ranked_better": 0.225,
+          "tied": 0.525,
+          "adequacy_a_minus_b": -0.07,
+          "adeq_ci_low": -0.13,
+          "adeq_ci_high": -0.015
+        },
+        {
+          "a": "gemma",
+          "b": "claude",
+          "records": 200,
+          "preference_a_over_b": -0.145,
+          "pref_ci_low": -0.245,
+          "pref_ci_high": -0.045,
+          "pref_interval_excludes_0": true,
+          "a_ranked_better": 0.205,
+          "b_ranked_better": 0.35,
+          "tied": 0.445,
+          "adequacy_a_minus_b": -0.11,
+          "adeq_ci_low": -0.17,
+          "adeq_ci_high": -0.055
+        },
+        {
+          "a": "lapa",
+          "b": "claude",
+          "records": 200,
+          "preference_a_over_b": -0.2,
+          "pref_ci_low": -0.305,
+          "pref_ci_high": -0.095,
+          "pref_interval_excludes_0": true,
+          "a_ranked_better": 0.195,
+          "b_ranked_better": 0.395,
+          "tied": 0.41,
+          "adequacy_a_minus_b": -0.04,
+          "adeq_ci_low": -0.095,
+          "adeq_ci_high": 0.01
+        }
+      ]
+    },
+    "reviewer_2": {
+      "system_scores": [
+        {
+          "metric": "adequacy",
+          "system": "gemma",
+          "mean": 3.895,
+          "ci_low": 3.835,
+          "ci_high": 3.945
+        },
+        {
+          "metric": "adequacy",
+          "system": "lapa",
+          "mean": 3.875,
+          "ci_low": 3.82,
+          "ci_high": 3.93
+        },
+        {
+          "metric": "adequacy",
+          "system": "claude",
+          "mean": 3.92,
+          "ci_low": 3.875,
+          "ci_high": 3.96
+        },
+        {
+          "metric": "fluency",
+          "system": "gemma",
+          "mean": 3.68,
+          "ci_low": 3.59,
+          "ci_high": 3.765
+        },
+        {
+          "metric": "fluency",
+          "system": "lapa",
+          "mean": 3.715,
+          "ci_low": 3.635,
+          "ci_high": 3.795
+        },
+        {
+          "metric": "fluency",
+          "system": "claude",
+          "mean": 3.805,
+          "ci_low": 3.735,
+          "ci_high": 3.87
+        },
+        {
+          "metric": "rank",
+          "system": "gemma",
+          "mean": 1.31,
+          "ci_low": 1.225,
+          "ci_high": 1.4
+        },
+        {
+          "metric": "rank",
+          "system": "lapa",
+          "mean": 1.315,
+          "ci_low": 1.24,
+          "ci_high": 1.395
+        },
+        {
+          "metric": "rank",
+          "system": "claude",
+          "mean": 1.24,
+          "ci_low": 1.17,
+          "ci_high": 1.32
+        },
+        {
+          "metric": "best",
+          "system": "gemma",
+          "mean": 0.77,
+          "ci_low": 0.71,
+          "ci_high": 0.825
+        },
+        {
+          "metric": "best",
+          "system": "lapa",
+          "mean": 0.765,
+          "ci_low": 0.705,
+          "ci_high": 0.82
+        },
+        {
+          "metric": "best",
+          "system": "claude",
+          "mean": 0.825,
+          "ci_low": 0.77,
+          "ci_high": 0.875
+        },
+        {
+          "metric": "critical",
+          "system": "gemma",
+          "mean": 0.015,
+          "ci_low": 0.0,
+          "ci_high": 0.035
+        },
+        {
+          "metric": "critical",
+          "system": "lapa",
+          "mean": 0.015,
+          "ci_low": 0.0,
+          "ci_high": 0.035
+        },
+        {
+          "metric": "critical",
+          "system": "claude",
+          "mean": 0.015,
+          "ci_low": 0.0,
+          "ci_high": 0.035
+        }
+      ],
+      "pairwise": [
+        {
+          "a": "gemma",
+          "b": "lapa",
+          "records": 200,
+          "preference_a_over_b": 0.015,
+          "pref_ci_low": -0.055,
+          "pref_ci_high": 0.08,
+          "pref_interval_excludes_0": false,
+          "a_ranked_better": 0.13,
+          "b_ranked_better": 0.115,
+          "tied": 0.755,
+          "adequacy_a_minus_b": 0.02,
+          "adeq_ci_low": -0.045,
+          "adeq_ci_high": 0.085
+        },
+        {
+          "a": "gemma",
+          "b": "claude",
+          "records": 200,
+          "preference_a_over_b": -0.055,
+          "pref_ci_low": -0.13,
+          "pref_ci_high": 0.020124999999999317,
+          "pref_interval_excludes_0": false,
+          "a_ranked_better": 0.13,
+          "b_ranked_better": 0.185,
+          "tied": 0.685,
+          "adequacy_a_minus_b": -0.025,
+          "adeq_ci_low": -0.085,
+          "adeq_ci_high": 0.035
+        },
+        {
+          "a": "lapa",
+          "b": "claude",
+          "records": 200,
+          "preference_a_over_b": -0.07,
+          "pref_ci_low": -0.155,
+          "pref_ci_high": 0.015,
+          "pref_interval_excludes_0": false,
+          "a_ranked_better": 0.135,
+          "b_ranked_better": 0.205,
+          "tied": 0.66,
+          "adequacy_a_minus_b": -0.045,
+          "adeq_ci_low": -0.105,
+          "adeq_ci_high": 0.02
+        }
+      ]
+    }
+  },
+  "decision": {
+    "status": "winner",
+    "winner": "claude",
+    "text": "claude is ranked best most often (78%) and is preferred over every other model by more than the bootstrap noise. Agreement is tentative (adequacy alpha 0.55, between 0.4 and 0.667): report adequacy scores and critical-issue rates as tentative.",
+    "agreement_level": "tentative",
+    "alpha_adequacy": 0.5548
+  },
+  "agreement_thresholds": {
+    "recalibrate_below": 0.4,
+    "reliable_from": 0.667,
+    "statistic": "Krippendorff's alpha (ordinal), adequacy, shared block"
+  },
+  "bootstrap": {
+    "resamples": 2000,
+    "seed": 42,
+    "unit": "record"
+  }
+}

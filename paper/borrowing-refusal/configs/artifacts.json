@@ -1,0 +1,23 @@
+{
+  "prompt_pairs": {
+    "repo_id": "steering-transfer/prompt-pairs",
+    "revision": "fa135e0b0356cf607e47e8efc939b8f4dd7d2054",
+    "filename": "prompt-pairs.csv",
+    "sha256": "5135c91c972fd4362e9e02573a8635b8630ceba8c8f9a81848bf7b491483ccdf"
+  },
+  "model_answers": {
+    "repo_id": "steering-transfer/model-answers",
+    "revision": "8a5a679f942f381ae56e2ed21514bead1ee7ec8b",
+    "manifest_sha256": "87ac366227f21dfbd98a45dac8df3087a996524d993e27bea1baa266f6ae10ec"
+  },
+  "guard_scores": {
+    "repo_id": "steering-transfer/safety-scores",
+    "revision": "7842737ee4f6a2071e755c4ac52fcca82d7de94d",
+    "files": {
+      "verdicts.jsonl": "7995b3af7686208175ca5eb7dbd77499718b382a6c1b9a320570720dc48518ec",
+      "verdicts.metadata.json": "80cffe2e761d4acdad7e5d08813a6eb9a2d9b74d863071deb5a39c4197300e9f",
+      "review-key.csv": "fd393fa65025a8a51fe8bd6172de0bac45ea7af69ca5ffffe71f7b2ccca92dd5",
+      "README.md": "47f7cf22687930e4ddc1849b146a2b7b372c93d0ca8ff8cf68223083841fdfa1"
+    }
+  }
+}

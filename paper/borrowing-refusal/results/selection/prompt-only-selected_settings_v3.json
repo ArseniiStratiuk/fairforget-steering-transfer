@@ -1,0 +1,62 @@
+{
+  "gemma-en": {
+    "layer": 16,
+    "multiplier": 3.0,
+    "strength": 2330.1718139648438,
+    "coherent_refusals": 34,
+    "random_coherent_refusals": 3,
+    "incoherent": 0,
+    "score": 31,
+    "rule": "most (coherent refusals - random coherent refusals - incoherent), then more coherent refusals, then smaller k"
+  },
+  "gemma-uk": {
+    "layer": 24,
+    "multiplier": 1.0,
+    "strength": 3447.5322265625,
+    "coherent_refusals": 48,
+    "random_coherent_refusals": 0,
+    "incoherent": 3,
+    "score": 45,
+    "rule": "most (coherent refusals - random coherent refusals - incoherent), then more coherent refusals, then smaller k"
+  },
+  "lapa-en": {
+    "layer": 20,
+    "multiplier": 4.0,
+    "strength": 4474.30322265625,
+    "coherent_refusals": 38,
+    "random_coherent_refusals": 2,
+    "incoherent": 12,
+    "score": 24,
+    "rule": "most (coherent refusals - random coherent refusals - incoherent), then more coherent refusals, then smaller k"
+  },
+  "lapa-uk": {
+    "layer": 20,
+    "multiplier": 4.0,
+    "strength": 4127.876953125,
+    "coherent_refusals": 23,
+    "random_coherent_refusals": 3,
+    "incoherent": 8,
+    "score": 12,
+    "rule": "most (coherent refusals - random coherent refusals - incoherent), then more coherent refusals, then smaller k"
+  },
+  "mamay-en": {
+    "layer": 18,
+    "multiplier": 2.0,
+    "strength": 1726.88427734375,
+    "coherent_refusals": 42,
+    "random_coherent_refusals": 0,
+    "incoherent": 0,
+    "score": 42,
+    "rule": "most (coherent refusals - random coherent refusals - incoherent), then more coherent refusals, then smaller k"
+  },
+  "mamay-uk": {
+    "layer": 20,
+    "multiplier": 2.0,
+    "strength": 2765.35693359375,
+    "coherent_refusals": 59,
+    "random_coherent_refusals": 3,
+    "incoherent": 1,
+    "score": 55,
+    "rule": "most (coherent refusals - random coherent refusals - incoherent), then more coherent refusals, then smaller k"
+  }
+}

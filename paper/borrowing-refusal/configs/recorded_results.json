@@ -1,0 +1,170 @@
+{
+  "guard_rubric_identity": "llama_guard_4_87acb4_native_policy",
+  "files": [
+    {
+      "path": "results/transfer/frozen-transfer-v2/gemma/2273125/responses.jsonl",
+      "kind": "responses",
+      "sha256": "603a2ec2ee21a9e381fb5f80a99c1a39af89cc48f1f9bf3dd6c8b9a9725f795f"
+    },
+    {
+      "path": "results/transfer/frozen-transfer-v2/gemma/2273136/verdicts.jsonl",
+      "kind": "guard_labels",
+      "sha256": "078032070c442a82bb2a6e08647d3154b525f356b6f3e92ffaa4a8421b3c2765"
+    },
+    {
+      "path": "results/transfer/frozen-transfer-v2/gemma/2273136/judge.metadata.json",
+      "kind": "judge_metadata",
+      "sha256": "bc4a6ae7b40e65f0957b157740975be773cc029690b74c6b41b528445873ccef",
+      "answers_path": "results/transfer/frozen-transfer-v2/gemma/2273125/responses.jsonl"
+    },
+    {
+      "path": "results/transfer/frozen-transfer-v1/gemma/2160809/predictions.jsonl",
+      "kind": "utility",
+      "sha256": "ad3794b2bc951d6b4265d6205c28ebddab4bc32346cee603fa109b4bf33fa493",
+      "model": "gemma"
+    },
+    {
+      "path": "results/transfer/frozen-transfer-v2/lapa/2273126/responses.jsonl",
+      "kind": "responses",
+      "sha256": "9b14ce3417590c9800577956f54a24424a3fafc10ab0c2d820eff3a2fae943d5"
+    },
+    {
+      "path": "results/transfer/frozen-transfer-v2/lapa/2273137/verdicts.jsonl",
+      "kind": "guard_labels",
+      "sha256": "d8a9df808d059ba257a9b66d63d9b7aabce0eb37da2cd3b1e44f8f90ad81d1b6"
+    },
+    {
+      "path": "results/transfer/frozen-transfer-v2/lapa/2273137/judge.metadata.json",
+      "kind": "judge_metadata",
+      "sha256": "6c9b79538baa490be639712173d0e69785f34f5fc56cd8ef9aa5a498f618d977",
+      "answers_path": "results/transfer/frozen-transfer-v2/lapa/2273126/responses.jsonl"
+    },
+    {
+      "path": "results/transfer/frozen-transfer-v1/lapa/2160810/predictions.jsonl",
+      "kind": "utility",
+      "sha256": "ddacfe14461af1075956e2579a816d997d9f193d1ab4a2d33df36de6169c6406",
+      "model": "lapa"
+    },
+    {
+      "path": "results/transfer/native-lapa-v1/lapa/2350983/responses.jsonl",
+      "kind": "responses",
+      "sha256": "622bd676767bb33d99aa4662248e444e102f73a944822c867ce27647eac7d827"
+    },
+    {
+      "path": "results/transfer/native-lapa-v1/lapa/2350986/verdicts.jsonl",
+      "kind": "guard_labels",
+      "sha256": "a6d9059a1c4567ceb17a80654abae0ca4c97cb319e1fb7b42cf0a91946d7ef00"
+    },
+    {
+      "path": "results/transfer/native-lapa-v1/lapa/2350986/judge.metadata.json",
+      "kind": "judge_metadata",
+      "sha256": "2b8d5430689d73731bf765c2b7b93ab09fe5b0748da7b0df9d8b4f15ec6a30a5",
+      "answers_path": "results/transfer/native-lapa-v1/lapa/2350983/responses.jsonl"
+    },
+    {
+      "path": "results/transfer/native-lapa-v1/lapa/2350983/worker-0/predictions.jsonl",
+      "kind": "utility",
+      "sha256": "20d5ba9183250b5b4c1f12eb25f280e45750326028edaf1a35011d36ee2ba57f",
+      "model": "lapa"
+    },
+    {
+      "path": "results/validation/gemma-english-pilot-v1/2148240/screen.csv",
+      "kind": "source_selection",
+      "sha256": "c830957073bd4348869d989a17b1cc2a7244da444ccc0cd2b000adadfbc06da0"
+    },
+    {
+      "path": "results/vector-comparison/2350517/geometry.csv",
+      "kind": "geometry",
+      "sha256": "d145bb881c2e1876820868cc13e10e7074be21a0914fbf2957572062b9505034"
+    },
+    {
+      "path": "results/vector-comparison/2350517/metadata.json",
+      "kind": "geometry_metadata",
+      "sha256": "c243ed64f637b1cc35cb48fe3818b526ed30c60a65f482f4ae0adc0e53a1b257"
+    },
+    {
+      "path": "results/validation/gemma-english-pilot-v1/2148240/directions.pt",
+      "kind": "source_direction",
+      "sha256": "adeb1f7a4bdacc1fd1b2d17c6d16ab17294e1ef418f40a3c07e74d80bdbf9d0d"
+    },
+    {
+      "path": "results/activations/gemma-english-pilot-v1/2144565/direction_summary.csv",
+      "kind": "source_geometry",
+      "sha256": "960d48c290df1b202011403a90510c41d8ea491c1ea73413bb6d98966b39a22a"
+    },
+    {
+      "path": "results/judges/jev-1.14.0/refusal-transfer-refusal_behavior-v2/labels.jsonl",
+      "kind": "refusal_behavior_labels",
+      "judge": "jev-1.14.0",
+      "rubric_version": 2,
+      "sha256": "054a6642d337933469526da683c36bc32f8e7089c4bb47586c25f41c340e0ed0"
+    },
+    {
+      "path": "results/persona/refusal-persona-v1/2340406/worker-0/responses.jsonl",
+      "kind": "persona_collection",
+      "sha256": "feabf9f88b9e929ac468f99377b53f4d3a596c1b06d71450f81a454693031a68"
+    },
+    {
+      "path": "results/persona/refusal-persona-v1/2340406/worker-1/responses.jsonl",
+      "kind": "persona_collection",
+      "sha256": "ce2d1ebe285af7497b9afa4a8d495fc73bb838ddbcfe3ec58b97be830734652e"
+    },
+    {
+      "path": "results/persona/refusal-persona-v1/2340406/worker-2/responses.jsonl",
+      "kind": "persona_collection",
+      "sha256": "f57c5e93064097e9744553edb8c4f9568c85e490f4585f706bfeb6287d480cd9"
+    },
+    {
+      "path": "results/persona/refusal-persona-v1/2340406/worker-3/responses.jsonl",
+      "kind": "persona_collection",
+      "sha256": "4fe6be99231db68f839606e0deb487e3c9a4819d4d91212c6e86818b420bca28"
+    },
+    {
+      "path": "results/research/persona-response-v2/fit-manifest.json",
+      "kind": "persona_fit",
+      "sha256": "5908431d2a9b33596a1f323efa67f6fe7a162ead36f31b20527239a0f9ecc781"
+    },
+    {
+      "path": "results/research/persona-response-v2/response_mean-directions.pt",
+      "kind": "persona_direction",
+      "sha256": "313d4ff910031d75704951fa8ca94af9cb725ed23ea90b0178d117f90763469b",
+      "method": "response_mean"
+    },
+    {
+      "path": "results/research/persona-response-v2/response_prefix_mean-directions.pt",
+      "kind": "persona_direction",
+      "sha256": "25811160ebcd4b494eb1961c120fd8bbffdf5df92d397823110213de737ea6cb",
+      "method": "response_prefix_mean"
+    },
+    {
+      "path": "results/research/persona-response-v2/geometry.csv",
+      "kind": "persona_geometry",
+      "sha256": "2ee948fb3c023cb1fc608904e73456c55200185356e06b75a97d914dbf2eb91f"
+    },
+    {
+      "path": "results/research/persona-response-v2/responses.jsonl",
+      "kind": "persona_responses",
+      "sha256": "426fb20bd908ef1be02405b82571ba5d683f6a51b87da09f0aa6f2e1efc7347b"
+    },
+    {
+      "path": "results/judges/jev-1.14.0/persona-collection-refusal_behavior-v2/labels.jsonl",
+      "kind": "persona_collection_behavior",
+      "sha256": "f30a8df99f6a13fa5e0fd747f147dace07a63c34d763bf6b19697aa6444672b8"
+    },
+    {
+      "path": "results/judges/jev-1.14.0/persona-collection-response_coherence-v1/labels.jsonl",
+      "kind": "persona_collection_coherence",
+      "sha256": "3106b2b779a82bcaad6818ba03b244f244250e94ed0befaf3fcee9a58561accd"
+    },
+    {
+      "path": "results/research/persona-response-v2/judgments/behavior/labels.jsonl",
+      "kind": "persona_steering_behavior",
+      "sha256": "52f91933dcf3ada80615e18586380ff6784ab127da348ac5f7582a707cc8d7e3"
+    },
+    {
+      "path": "results/research/persona-response-v2/judgments/coherence/labels.jsonl",
+      "kind": "persona_steering_coherence",
+      "sha256": "51e06444a0501be4e68ad4e37f14b16335fbfcb51ab6b8ac516b5e78d0dc47da"
+    }
+  ]
+}

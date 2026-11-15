@@ -1,5 +1,10 @@
 # Does refusal steering transfer to Ukrainian models?
 
+**Paper:** *Borrowing Refusal From Sibling Models* (Arsenii Stratiuk, Ivan Maksymchuk, Viktoriia
+Makovska). Its code, result tables and selection evidence are in
+[`paper/borrowing-refusal/`](paper/borrowing-refusal/); the version cited in the paper is tag `arxiv-v1`.
+The results below come from the earlier removal-only study that preceded the paper.
+
 We extract a refusal direction from Gemma 3 and remove it from Gemma and its
 Ukrainian adaptation, Lapa. The same direction transfers without target training.
 

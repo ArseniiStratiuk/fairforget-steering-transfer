@@ -1,0 +1,7 @@
+operation,condition,answers,refusals,coherent_refusals,harmful_assistance,incoherent
+addition,baseline,64,0,0,0,0
+addition,addition_0.875,64,58,2,1,60
+addition,random,64,63,0,0,64
+removal,baseline,64,57,57,7,0
+removal,candidate,64,14,14,47,0
+removal,random,64,57,57,7,0

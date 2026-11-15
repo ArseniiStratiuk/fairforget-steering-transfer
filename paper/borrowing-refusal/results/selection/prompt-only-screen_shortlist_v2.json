@@ -1,0 +1,161 @@
+{
+  "rule": "Shortlist addition settings from the 64-token prompt-only screen without its coherence label.\n\nJev labels many answers that stop at the 64-token limit as incoherent, so the screen ranks\nsettings by refusals among answers whose first 64 tokens show no repetition loop (distinct\ntoken-trigram share >= 0.6). Ties: fewer loops, smaller k, earlier block. Coherence is then\nmeasured by full-length validation. Writes addition_arm_prompt/screen_shortlist_v2.json.",
+  "shortlist": {
+    "gemma-en": [
+      {
+        "layer": 16,
+        "multiplier": 2.0,
+        "refusals": 64,
+        "loops": 0
+      },
+      {
+        "layer": 18,
+        "multiplier": 2.0,
+        "refusals": 64,
+        "loops": 0
+      },
+      {
+        "layer": 14,
+        "multiplier": 3.0,
+        "refusals": 64,
+        "loops": 0
+      },
+      {
+        "layer": 16,
+        "multiplier": 3.0,
+        "refusals": 64,
+        "loops": 0
+      }
+    ],
+    "gemma-uk": [
+      {
+        "layer": 16,
+        "multiplier": 2.0,
+        "refusals": 64,
+        "loops": 0
+      },
+      {
+        "layer": 14,
+        "multiplier": 3.0,
+        "refusals": 64,
+        "loops": 0
+      },
+      {
+        "layer": 14,
+        "multiplier": 4.0,
+        "refusals": 64,
+        "loops": 0
+      },
+      {
+        "layer": 14,
+        "multiplier": 6.0,
+        "refusals": 64,
+        "loops": 0
+      }
+    ],
+    "mamay-en": [
+      {
+        "layer": 16,
+        "multiplier": 4.0,
+        "refusals": 61,
+        "loops": 0
+      },
+      {
+        "layer": 16,
+        "multiplier": 6.0,
+        "refusals": 60,
+        "loops": 0
+      },
+      {
+        "layer": 18,
+        "multiplier": 6.0,
+        "refusals": 59,
+        "loops": 3
+      },
+      {
+        "layer": 18,
+        "multiplier": 2.0,
+        "refusals": 58,
+        "loops": 0
+      }
+    ],
+    "mamay-uk": [
+      {
+        "layer": 20,
+        "multiplier": 3.0,
+        "refusals": 64,
+        "loops": 0
+      },
+      {
+        "layer": 20,
+        "multiplier": 2.0,
+        "refusals": 63,
+        "loops": 0
+      },
+      {
+        "layer": 18,
+        "multiplier": 2.0,
+        "refusals": 62,
+        "loops": 0
+      },
+      {
+        "layer": 16,
+        "multiplier": 4.0,
+        "refusals": 62,
+        "loops": 0
+      }
+    ],
+    "lapa-en": [
+      {
+        "layer": 20,
+        "multiplier": 4.0,
+        "refusals": 47,
+        "loops": 2
+      },
+      {
+        "layer": 18,
+        "multiplier": 6.0,
+        "refusals": 38,
+        "loops": 0
+      },
+      {
+        "layer": 22,
+        "multiplier": 3.0,
+        "refusals": 36,
+        "loops": 6
+      },
+      {
+        "layer": 22,
+        "multiplier": 2.0,
+        "refusals": 34,
+        "loops": 0
+      }
+    ],
+    "lapa-uk": [
+      {
+        "layer": 18,
+        "multiplier": 6.0,
+        "refusals": 37,
+        "loops": 0
+      },
+      {
+        "layer": 20,
+        "multiplier": 4.0,
+        "refusals": 26,
+        "loops": 0
+      },
+      {
+        "layer": 24,
+        "multiplier": 3.0,
+        "refusals": 24,
+        "loops": 5
+      },
+      {
+        "layer": 20,
+        "multiplier": 6.0,
+        "refusals": 22,
+        "loops": 11
+      }
+    ]
+  }
+}

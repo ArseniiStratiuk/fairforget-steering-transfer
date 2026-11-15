@@ -1,0 +1,75 @@
+{
+  "dataset": "JailbreakBench/JBB-Behaviors (harmful) + AdvBench (harmful_behaviors), merged; Ukrainian translations revised after blind review",
+  "derived_from": {
+    "repo_id": "steering-transfer/prompt-pairs",
+    "file": "prompt-pairs.csv",
+    "revision": "fa135e0b0356cf607e47e8efc939b8f4dd7d2054",
+    "sha256": "5135c91c972fd4362e9e02573a8635b8630ceba8c8f9a81848bf7b491483ccdf",
+    "provenance": "prompt-pairs.provenance.json"
+  },
+  "output_file": "prompt-pairs-after-review.csv",
+  "output_sha256": "71957b2ce6678e08e3d9421ff82c5a5599285d308e871a6cf503ed823000e07a",
+  "rows": 620,
+  "columns": [
+    "record_id",
+    "source",
+    "goal",
+    "ukrainian_prompt",
+    "discard",
+    "similar_record_id"
+  ],
+  "changes": {
+    "column_changed": "ukrainian_prompt",
+    "rows_changed": 24,
+    "record_ids_changed": [
+      8,
+      17,
+      22,
+      46,
+      52,
+      54,
+      57,
+      81,
+      126,
+      133,
+      181,
+      242,
+      262,
+      268,
+      313,
+      325,
+      407,
+      413,
+      446,
+      513,
+      516,
+      523,
+      524,
+      589
+    ],
+    "unchanged_columns": "record_id, source, goal, discard and similar_record_id are identical to prompt-pairs.csv; row order and CSV format (CRLF line endings) are unchanged",
+    "edit_log": "prompt-pairs-after-review.edits.csv"
+  },
+  "method": {
+    "date": "2026-10-25",
+    "source_of_edits": "Free-text comments written on the Claude translations in the blind translation review (translation-review/): 27 comments on 26 prompts, 24 by reviewer_1 and 3 by reviewer_2. Comments on the Gemma and Lapa translations were not used.",
+    "drafting": "For each of the 26 prompts an AI assistant (Claude Opus 5.5, claude-opus-5-5, in the Claude Code desktop app) drafted a minimal edit that applies the reviewer's comment and changes nothing else, following the original translation rules (preserve meaning and register, informal singular imperative, no added or removed content). Two comments were left unapplied in the draft and marked for a decision: record 54 (the reviewer judged the existing text acceptable) and record 358 (the suggestion would change the request from medical records to a prescription).",
+    "decision": "A team member decided every prompt in a local review page showing the English prompt, the comment, the current text and the draft: accept the draft, keep the original, or write their own version.",
+    "decisions": {
+      "accepted_draft": 23,
+      "own_version": 2,
+      "kept_original": 1
+    },
+    "unchanged_after_decision": [
+      358,
+      419
+    ],
+    "note": "Record 358 was accepted as drafted, which leaves its text unchanged; record 419 kept the original."
+  },
+  "scope_and_limitations": [
+    "Only the 26 prompts with a comment on the Claude translation were revised. The other 594 translations are unchanged, including 310 records that were not part of the human review.",
+    "The edits are reviewer suggestions applied with AI assistance and decided by one team member; they are not an independent second human review.",
+    "Translations remain draft, not a team-approved ground truth release.",
+    "Model answers generated for the Ukrainian prompts of the changed record_ids belong to the previous text and must be regenerated before this file is used for them."
+  ]
+}

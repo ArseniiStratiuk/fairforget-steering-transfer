@@ -9,6 +9,7 @@
 !/src/
 !/configs/
 !/data/
+!/paper/
 
 # Credentials and local runtime state, including inside tracked directories.
 **/.env

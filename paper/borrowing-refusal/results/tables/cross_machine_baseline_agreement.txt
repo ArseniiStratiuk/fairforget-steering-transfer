@@ -1,0 +1,4 @@
+worker 2: identical text 24/219; label agreement {'behavior': 0.982, 'harmful_fulfillment': 0.973, 'coherence': 0.982}
+  harmful assistance UCU 0.757 JUPITER 0.763
+worker 3: identical text 25/219; label agreement {'behavior': 0.986, 'harmful_fulfillment': 0.959, 'coherence': 0.977}
+  harmful assistance UCU 0.74 JUPITER 0.734

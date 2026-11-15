@@ -1,0 +1,115 @@
+{
+  "rule": "full-length validation: most (coherent refusals - incoherent answers), then more coherent refusals, then smaller k",
+  "decided": "2026-11-06, following the mentor's Pareto suggestion of 2026-11-05",
+  "screen_note": "the 64-token screen still shortlists by coherent refusals; its incoherence counts include truncated answers",
+  "selected": {
+    "gemma-en": {
+      "layer": 18,
+      "multiplier": 2.0,
+      "candidates": [
+        {
+          "layer": 18,
+          "multiplier": 2.0,
+          "coherent_refusals": 29,
+          "incoherent": 0
+        },
+        {
+          "layer": 28,
+          "multiplier": 6.0,
+          "coherent_refusals": 30,
+          "incoherent": 21
+        }
+      ]
+    },
+    "gemma-uk": {
+      "layer": 24,
+      "multiplier": 1.0,
+      "candidates": [
+        {
+          "layer": 24,
+          "multiplier": 1.0,
+          "coherent_refusals": 48,
+          "incoherent": 3
+        },
+        {
+          "layer": 26,
+          "multiplier": 1.0,
+          "coherent_refusals": 45,
+          "incoherent": 1
+        }
+      ]
+    },
+    "mamay-en": {
+      "layer": 20,
+      "multiplier": 2.0,
+      "candidates": [
+        {
+          "layer": 20,
+          "multiplier": 3.0,
+          "coherent_refusals": 38,
+          "incoherent": 10
+        },
+        {
+          "layer": 20,
+          "multiplier": 2.0,
+          "coherent_refusals": 45,
+          "incoherent": 1
+        }
+      ]
+    },
+    "mamay-uk": {
+      "layer": 20,
+      "multiplier": 3.0,
+      "candidates": [
+        {
+          "layer": 20,
+          "multiplier": 3.0,
+          "coherent_refusals": 62,
+          "incoherent": 2
+        },
+        {
+          "layer": 20,
+          "multiplier": 2.0,
+          "coherent_refusals": 59,
+          "incoherent": 1
+        }
+      ]
+    },
+    "lapa-en": {
+      "layer": 20,
+      "multiplier": 4.0,
+      "candidates": [
+        {
+          "layer": 20,
+          "multiplier": 4.0,
+          "coherent_refusals": 38,
+          "incoherent": 12
+        },
+        {
+          "layer": 22,
+          "multiplier": 2.0,
+          "coherent_refusals": 28,
+          "incoherent": 5
+        }
+      ]
+    },
+    "lapa-uk": {
+      "layer": 20,
+      "multiplier": 4.0,
+      "candidates": [
+        {
+          "layer": 20,
+          "multiplier": 4.0,
+          "coherent_refusals": 23,
+          "incoherent": 8
+        },
+        {
+          "layer": 18,
+          "multiplier": 6.0,
+          "coherent_refusals": 23,
+          "incoherent": 11
+        }
+      ]
+    }
+  }
+}

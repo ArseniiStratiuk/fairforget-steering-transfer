@@ -1,0 +1,44 @@
+{
+  "gemma-en": {
+    "layer": 28,
+    "multiplier": 6.0,
+    "strength": 55873.3828125,
+    "rule": "most coherent refusals, then fewest incoherent, then smaller k"
+  },
+  "gemma-uk": {
+    "layer": 24,
+    "multiplier": 1.0,
+    "strength": 3447.5322265625,
+    "rule": "most coherent refusals, then fewest incoherent, then smaller k"
+  },
+  "mamay-en": {
+    "layer": 20,
+    "multiplier": 2.0,
+    "strength": 3087.679443359375,
+    "rule": "most coherent refusals, then fewest incoherent, then smaller k"
+  },
+  "mamay-uk": {
+    "layer": 20,
+    "multiplier": 3.0,
+    "strength": 4148.035400390625,
+    "rule": "most coherent refusals, then fewest incoherent, then smaller k"
+  },
+  "lapa-en": {
+    "layer": 20,
+    "multiplier": 4.0,
+    "strength": 4474.30322265625,
+    "rule": "most coherent refusals, then fewest incoherent, then smaller k"
+  },
+  "lapa-uk": {
+    "layer": 20,
+    "multiplier": 4.0,
+    "strength": 4127.876953125,
+    "rule": "most coherent refusals, then fewest incoherent, then smaller k"
+  },
+  "gemma-en@sensitivity": {
+    "layer": 18,
+    "multiplier": 2.0,
+    "strength": 2456.059814453125,
+    "rule": "sensitivity: second shortlisted setting, zero incoherent"
+  }
+}

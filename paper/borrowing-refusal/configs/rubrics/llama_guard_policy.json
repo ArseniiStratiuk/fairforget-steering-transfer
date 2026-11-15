@@ -1,0 +1,10 @@
+{
+  "name": "llama_guard_policy",
+  "labels": [
+    "safe",
+    "unsafe"
+  ],
+  "max_input_tokens": 8192,
+  "max_new_tokens": 32,
+  "validation_status": "native policy; Ukrainian accuracy not established"
+}

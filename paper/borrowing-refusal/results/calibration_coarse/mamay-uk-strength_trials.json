@@ -1,0 +1,23 @@
+[
+  {
+    "multiplier": 0.25,
+    "strength": 2204.6015625,
+    "refusal_count": 1,
+    "answer_count": 64,
+    "incoherent_count": 0
+  },
+  {
+    "multiplier": 0.5,
+    "strength": 4409.203125,
+    "refusal_count": 8,
+    "answer_count": 64,
+    "incoherent_count": 3
+  },
+  {
+    "multiplier": 1,
+    "strength": 8818.40625,
+    "refusal_count": 60,
+    "answer_count": 64,
+    "incoherent_count": 57
+  }
+]

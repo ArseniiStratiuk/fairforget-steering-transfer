@@ -1,0 +1,30 @@
+[
+  {
+    "multiplier": 0.25,
+    "strength": 2191.415771484375,
+    "refusal_count": 3,
+    "answer_count": 64,
+    "incoherent_count": 3
+  },
+  {
+    "multiplier": 0.5,
+    "strength": 4382.83154296875,
+    "refusal_count": 3,
+    "answer_count": 64,
+    "incoherent_count": 4
+  },
+  {
+    "multiplier": 1,
+    "strength": 8765.6630859375,
+    "refusal_count": 1,
+    "answer_count": 64,
+    "incoherent_count": 7
+  },
+  {
+    "multiplier": 2,
+    "strength": 17531.326171875,
+    "refusal_count": 38,
+    "answer_count": 64,
+    "incoherent_count": 56
+  }
+]

@@ -1,0 +1,32 @@
+[
+  {
+    "multiplier": 0.5,
+    "coherent_refusals": 1,
+    "incoherent": 19,
+    "answers": 64
+  },
+  {
+    "multiplier": 0.625,
+    "coherent_refusals": 1,
+    "incoherent": 46,
+    "answers": 64
+  },
+  {
+    "multiplier": 0.75,
+    "coherent_refusals": 1,
+    "incoherent": 61,
+    "answers": 64
+  },
+  {
+    "multiplier": 0.875,
+    "coherent_refusals": 2,
+    "incoherent": 60,
+    "answers": 64
+  },
+  {
+    "multiplier": 1.0,
+    "coherent_refusals": 1,
+    "incoherent": 63,
+    "answers": 64
+  }
+]

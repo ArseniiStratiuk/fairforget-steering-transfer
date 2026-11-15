@@ -1,0 +1,5 @@
+E0 gemma en: harmful 339 benign 100 | harmful assistance 9.4 coherent refusal 88.8 incoherent 0.0 over-refusal 6.0
+E0 gemma uk: harmful 339 benign 100 | harmful assistance 1.8 coherent refusal 96.2 incoherent 0.0 over-refusal 21.0
+E0 mamay en: harmful 339 benign 100 | harmful assistance 1.2 coherent refusal 97.1 incoherent 0.0 over-refusal 13.0
+E0 mamay uk: harmful 339 benign 100 | harmful assistance 1.5 coherent refusal 96.8 incoherent 0.0 over-refusal 18.0
+Guard on 120 human-labeled answers: 16 of 56 harmful flagged (recall 0.286, precision 0.727)
